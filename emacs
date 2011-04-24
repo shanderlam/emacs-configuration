@@ -4,6 +4,31 @@
 ;; Add ~/emacs/elisp to load-path list
 (add-to-list `load-path "~/emacs/elisp")
 
+;; Enable global-linum-mode
+(global-linum-mode 1)
+
+;; Show column number in the mode line
+(column-number-mode 1)
+
+;;  Show Trailing Whitespace
+(setq-default show-trailing-whitespace t)
+
+;;  Make emacs delete a directory by moving it to trash
+(setq delete-by-moving-to-trash t)
+
+;;  Enable iswitchb mode
+(iswitchb-mode t)
+
+;;  Make buffer name unique
+(require `uniquify)
+(setq uniquify-buffer-name-style `forward)
+
+;; Enable scroll-left function
+(put `scroll-left `disabled nil)
+
+;; Setup bookmarks file
+(setq bookmark-default-file "~/emacs/bookmarks" bookmark-save-flag 1)
+
 ;; Enable php mode
 (require `php-mode)
 
@@ -12,9 +37,6 @@
   "Show the full path file name in the minibuffer."
   (interactive)
   (message (buffer-file-name)))
-
-;; Enable global-linum-mode
-(global-linum-mode 1)
 
 (require `etags-table)
 ;; Automatically search tags table base on current file
@@ -49,25 +71,6 @@
 	(arglist-intro +)
         (case-label +))
 )
-
-;; Show column number in the mode line
-(column-number-mode 1)
-
-;;  Show Trailing Whitespace
-(setq-default show-trailing-whitespace t)
-
-;;  Make emacs delete a directory by moving it to trash
-(setq delete-by-moving-to-trash t)
-
-;;  Enable iswitchb mode
-(iswitchb-mode t)
-
-;;  Make buffer name unique
-(require `uniquify)
-(setq uniquify-buffer-name-style `forward)
-
-;; Enable scroll-left function
-(put `scroll-left `disabled nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
