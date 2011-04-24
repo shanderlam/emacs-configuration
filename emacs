@@ -37,6 +37,7 @@
   "Show the full path file name in the minibuffer."
   (interactive)
   (message (buffer-file-name)))
+(global-set-key "\C-cs" `show-file-name)
 
 (require `etags-table)
 ;; Automatically search tags table base on current file
