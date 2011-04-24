@@ -1,7 +1,7 @@
 ;;  Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist `(("." . "~/emacs/backup-files")))
 
-;; Add ~/elisp to load-path list
+;; Add ~/emacs/elisp to load-path list
 (add-to-list `load-path "~/emacs/elisp")
 
 ;; Enable php mode
