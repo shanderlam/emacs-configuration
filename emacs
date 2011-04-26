@@ -29,32 +29,6 @@
 ;; Setup bookmarks file
 (setq bookmark-default-file "~/emacs/bookmarks" bookmark-save-flag 1)
 
-;; Enable php mode
-(require 'php-mode)
-
-;; Define a function to show full path name in the minibuffer
-(defun show-file-name ()
-  "Show the full path file name in the minibuffer."
-  (interactive)
-  (message (buffer-file-name)))
-(global-set-key "\C-cs" 'show-file-name)
-
-(require 'etags-table)
-;; Automatically search tags table base on current file
-(setq etags-table-search-up-depth 10)
-;; Set tags table alist for specified project
-(setq etags-table-alist
-      (list
-       '("/Users/shanderlam/Workspace/Projects/YupooForWordpress/.*"
-         "/Users/shanderlam/Workspace/Open Source/Wordpress/trunk/TAGS"
-         "/Users/shanderlam/Workspace/Projects/YupooForWordpress/TAGS"
-         )
-       '("/Users/shanderlam/Workspace/Projects/sprout/.*"
-         "/Users/shanderlam/Workspace/Projects/sprout/TAGS"
-         "/Users/shanderlam/Workspace/Projects/workforme/TAGS"
-         )
-       ))
-
 ;; Make usual search commands matches only file name when point was on a
 ;; file name initially
 (setq dired-isearch-filenames 'dwim)
@@ -120,3 +94,38 @@
 	     (setq show-trailing-whitespace nil)
 	     ;; Mark all visible dates that have diary entries
 	     (diary-mark-entries)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Configurations for extensions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Enable php mode
+(require 'php-mode)
+
+(require 'etags-table)
+;; Automatically search tags table base on current file
+(setq etags-table-search-up-depth 10)
+;; Set tags table alist for specified project
+(setq etags-table-alist
+      (list
+       '("/Users/shanderlam/Workspace/Projects/YupooForWordpress/.*"
+         "/Users/shanderlam/Workspace/Open Source/Wordpress/trunk/TAGS"
+         "/Users/shanderlam/Workspace/Projects/YupooForWordpress/TAGS"
+         )
+       '("/Users/shanderlam/Workspace/Projects/sprout/.*"
+         "/Users/shanderlam/Workspace/Projects/sprout/TAGS"
+         "/Users/shanderlam/Workspace/Projects/workforme/TAGS"
+         )
+       ))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Configurations for custom function
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Define a function to show full path name in the minibuffer
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (message (buffer-file-name)))
+(global-set-key "\C-cs" 'show-file-name)
+
