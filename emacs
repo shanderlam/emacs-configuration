@@ -121,6 +121,10 @@
 (load-file "~/emacs/elisp/etags-select.el")
 (global-set-key "\M-?" 'etags-select-find-tag-at-point)
 (global-set-key "\M-." 'etags-select-find-tag)
+(add-hook 'etags-select-mode-hook
+	  '(lambda()
+             (local-set-key "\r" 'etags-select-goto-tag)
+             (local-set-key "o" 'etags-select-goto-tag-other-window)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for custom function
