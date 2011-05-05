@@ -38,6 +38,9 @@
 (add-hook 'python-mode-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook 'hs-minor-mode)
 
+;; Set tab width
+(setq-default tab-width 4)
+
 ;; Not use tab for indentation
 (setq-default indent-tabs-mode nil)
 
@@ -143,4 +146,3 @@
   (interactive)
   (message (buffer-file-name)))
 (global-set-key "\C-cs" 'show-file-name)
-
