@@ -50,8 +50,8 @@
 ;; Set indentation of c mode
 (setq c-offsets-alist
       '((substatement-open . 0)
-	(arglist-close c-lineup-arglist-operators)
-	(arglist-intro +)
+        (arglist-close c-lineup-arglist-operators)
+        (arglist-intro +)
         (case-label +))
 )
 
