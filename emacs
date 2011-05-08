@@ -1,4 +1,4 @@
-;;  Make backup file save in ~/EmacsBackupFiles Directory
+;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist '(("." . "~/emacs/backup-files")))
 
 ;; Add ~/emacs/elisp to load-path list
@@ -10,16 +10,16 @@
 ;; Show column number in the mode line
 (column-number-mode 1)
 
-;;  Show Trailing Whitespace
+;; Show Trailing Whitespace
 (setq-default show-trailing-whitespace t)
 
-;;  Make emacs delete a directory by moving it to trash
+;; Make emacs delete a directory by moving it to trash
 (setq delete-by-moving-to-trash t)
 
-;;  Enable iswitchb mode
+;; Enable iswitchb mode
 (iswitchb-mode t)
 
-;;  Make buffer name unique
+;; Make buffer name unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
 
@@ -60,6 +60,12 @@
           (lambda ()
             ;; Default indentation is usually 2 spaces, changing to 4.
             (set (make-local-variable 'sgml-basic-offset) 4)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Configuration for org-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq org-log-done t)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
