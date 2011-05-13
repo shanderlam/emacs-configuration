@@ -117,6 +117,9 @@
 ;; Enable php mode
 (require 'php-mode)
 
+;; Automatically activate flymake mode for php mode
+(add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
+
 (require 'etags-table)
 ;; Automatically search tags table base on current file
 (setq etags-table-search-up-depth 10)
