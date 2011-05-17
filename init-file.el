@@ -27,7 +27,8 @@
 (put 'scroll-left 'disabled nil)
 
 ;; Setup bookmarks file
-(setq bookmark-default-file "~/emacs/bookmarks" bookmark-save-flag 1)
+(setq bookmark-default-file "~/emacs/bookmarks"
+      bookmark-save-flag 1)
 
 ;; Make usual search commands matches only file name when point was on a
 ;; file name initially
@@ -61,13 +62,6 @@
             ;; Default indentation is usually 2 spaces, changing to 4.
             (set (make-local-variable 'sgml-basic-offset) 4)))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Configuration for org-mode
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (setq org-log-done 'note)
-;; (setq org-todo-keywords
-;;        '((sequence "TODO" "STARTED"  "|" "DONE" )))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
@@ -92,6 +86,7 @@
 ;; Make connect to the server using STARTTLS
 (setq smtpmail-starttls-credentials
       '(("smtp.gmail.com" 587 nil nil)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for calendar
