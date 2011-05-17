@@ -101,11 +101,11 @@
 
 ;; Customize calendar
 (add-hook 'calendar-initial-window-hook
-	  '(lambda()
-	     ;; Hide trailing whitespace
-	     (setq show-trailing-whitespace nil)
-	     ;; Mark all visible dates that have diary entries
-	     (diary-mark-entries)))
+      '(lambda()
+         ;; Hide trailing whitespace
+         (setq show-trailing-whitespace nil)
+         ;; Mark all visible dates that have diary entries
+         (diary-mark-entries)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for extensions
@@ -138,7 +138,7 @@
 (global-set-key "\M-?" 'etags-select-find-tag-at-point)
 (global-set-key "\M-." 'etags-select-find-tag)
 (add-hook 'etags-select-mode-hook
-	  '(lambda()
+          '(lambda()
              (local-set-key "\r" 'etags-select-goto-tag)
              (local-set-key "o" 'etags-select-goto-tag-other-window)))
 
@@ -146,9 +146,14 @@
 ;; Configurations for custom function
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Define a function to show full path name in the minibuffer
 (defun show-file-name ()
   "Show the full path file name in the minibuffer."
   (interactive)
   (message (buffer-file-name)))
 (global-set-key "\C-cs" 'show-file-name)
+
+(defun clear-whitespace ()
+  "Delete trailing white space, and replace tabs with spaces."
+  (interactive)
+  (delete-trailing-whitespace)
+  (untabify (point-min) (point-max)))
