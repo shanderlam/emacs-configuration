@@ -124,11 +124,11 @@
 (setq etags-table-alist
       (list
        '("/Users/shanderlam/Workspace/Projects/YupooForWordpress/.*"
-         "/Users/shanderlam/Workspace/Open Source/Wordpress/trunk/TAGS"
+         "/Users/shanderlam/Workspace/open-source/Wordpress/trunk/TAGS"
          "/Users/shanderlam/Workspace/Projects/YupooForWordpress/TAGS"
          )
        '("/Users/shanderlam/Workspace/Projects/sprout/.*"
-         "/Users/shanderlam/Workspace/Open Source/mootools-core.git/Source/TAGS"
+         "/Users/shanderlam/Workspace/open-source/mootools-core.git/Source/TAGS"
          "/Users/shanderlam/Workspace/Projects/sprout/TAGS"
          "/Users/shanderlam/Workspace/Projects/workforme/TAGS"
          )
