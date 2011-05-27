@@ -62,6 +62,9 @@
             ;; Default indentation is usually 2 spaces, changing to 4.
             (set (make-local-variable 'sgml-basic-offset) 4)))
 
+(add-to-list 'hs-special-modes-alist
+             '(php-mode "{{{" "}}}"))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
@@ -120,19 +123,8 @@
 (require 'etags-table)
 ;; Automatically search tags table base on current file
 (setq etags-table-search-up-depth 10)
-;; Set tags table alist for specified project
-(setq etags-table-alist
-      (list
-       '("/Users/shanderlam/Workspace/Projects/YupooForWordpress/.*"
-         "/Users/shanderlam/Workspace/open-source/Wordpress/trunk/TAGS"
-         "/Users/shanderlam/Workspace/Projects/YupooForWordpress/TAGS"
-         )
-       '("/Users/shanderlam/Workspace/Projects/sprout/.*"
-         "/Users/shanderlam/Workspace/open-source/mootools-core.git/Source/TAGS"
-         "/Users/shanderlam/Workspace/Projects/sprout/TAGS"
-         "/Users/shanderlam/Workspace/Projects/workforme/TAGS"
-         )
-       ))
+;; Load projects etags table configuration
+(load-file "~/emacs/conf/projects.el")
 
 ;; Configure etags-select
 (load-file "~/emacs/elisp/etags-select.el")
