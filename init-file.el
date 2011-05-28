@@ -59,9 +59,11 @@
 ;; Set indentation of html mode
 (add-hook 'html-mode-hook
           (lambda ()
-            ;; Default indentation is usually 2 spaces, changing to 4.
+            ;; Default indentation is usually 2 spaces, changing to 4
             (set (make-local-variable 'sgml-basic-offset) 4)))
 
+;; Set F1 key for manual entry of current word
+(global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
