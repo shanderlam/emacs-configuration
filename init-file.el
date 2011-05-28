@@ -122,10 +122,8 @@
 (add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
 
 (require 'etags-table)
-;; Automatically search tags table base on current file
-(setq etags-table-search-up-depth 10)
-;; Load projects etags table configuration
-(load-file "~/emacs/conf/projects.el")
+;; Don't search tags file automatically
+(setq etags-table-search-up-depth nil)
 
 ;; Configure etags-select
 (load-file "~/emacs/elisp/etags-select.el")
