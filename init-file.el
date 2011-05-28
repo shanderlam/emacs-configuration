@@ -1,3 +1,5 @@
+;; -*- mode: Lisp; -*-
+
 ;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist '(("." . "~/emacs/backup-files")))
 
