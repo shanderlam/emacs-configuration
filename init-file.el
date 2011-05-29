@@ -121,10 +121,6 @@
 ;; Automatically activate flymake mode for php mode
 (add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
 
-(require 'etags-table)
-;; Don't search tags file automatically
-(setq etags-table-search-up-depth nil)
-
 ;; Configure etags-select
 (load-file "~/emacs/elisp/etags-select.el")
 (global-set-key "\M-?" 'etags-select-find-tag-at-point)
