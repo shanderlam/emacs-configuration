@@ -64,8 +64,8 @@
             ;; Default indentation is usually 2 spaces, changing to 4
             (set (make-local-variable 'sgml-basic-offset) 4)))
 
-;; Set F1 key for manual entry of current word
-(global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
+;; Load directory specified setting
+(load-file "~/emacs/conf/directories.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
@@ -149,3 +149,6 @@
   (interactive)
   (delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
+
+;; Set F1 key for manual entry of current word
+(global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
