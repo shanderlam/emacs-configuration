@@ -134,6 +134,9 @@
 ;; Configurations for custom function
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+(defvar file-name (file-name-nondirectory buffer-file-name)
+  "File name of current buffer without full path.")
+
 (defun show-file-path ()
   "Show the full path file name of current buffer in the minibuffer."
   (interactive)
@@ -142,7 +145,12 @@
 (defun show-file-name ()
   "Show the file name of current buffer in the minibuffer."
   (interactive)
-  (message (file-name-nondirectory buffer-file-name)))
+  (message file-name))
+
+(defun insert-file-name ()
+  "Insert file name of current buffer to current cursor position"
+  (interactive)
+  (insert file-name))
 
 (defun clear-whitespace ()
   "Delete trailing white space, and replace tabs with spaces."
