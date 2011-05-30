@@ -134,11 +134,15 @@
 ;; Configurations for custom function
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun show-file-name ()
-  "Show the full path file name in the minibuffer."
+(defun show-file-path ()
+  "Show the full path file name of current buffer in the minibuffer."
   (interactive)
   (message (buffer-file-name)))
-(global-set-key "\C-cs" 'show-file-name)
+
+(defun show-file-name ()
+  "Show the file name of current buffer in the minibuffer."
+  (interactive)
+  (message (file-name-nondirectory buffer-file-name)))
 
 (defun clear-whitespace ()
   "Delete trailing white space, and replace tabs with spaces."
