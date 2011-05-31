@@ -6,6 +6,9 @@
 ;; Add ~/emacs/elisp to load-path list
 (add-to-list 'load-path "~/emacs/elisp")
 
+;; Set default abbrev definition file
+(setq abbrev-file-name "~/emacs/abbrev_defs")
+
 ;; Enable global-linum-mode
 (global-linum-mode 1)
 
