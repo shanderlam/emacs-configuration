@@ -44,6 +44,10 @@
 (add-hook 'python-mode-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook 'hs-minor-mode)
 
+;; Automatically activate abbrev-mode for some major mode
+(add-hook 'js-mode-hook 'abbrev-mode)
+
+
 ;; Set tab width
 (setq-default tab-width 4)
 
