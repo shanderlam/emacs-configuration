@@ -42,10 +42,10 @@
 ;; Automatically activate hs-minor-mode for some programing mode initialization
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 (add-hook 'python-mode-hook 'hs-minor-mode)
-(add-hook 'js-mode-hook 'hs-minor-mode)
+(add-hook 'js2-mode-hook 'hs-minor-mode)
 
 ;; Automatically activate abbrev-mode for some major mode
-(add-hook 'js-mode-hook 'abbrev-mode)
+(add-hook 'js2-mode-hook 'abbrev-mode)
 
 
 ;; Set tab width
@@ -124,9 +124,13 @@
 
 ;; Enable php mode
 (require 'php-mode)
-
 ;; Automatically activate flymake mode for php mode
 (add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
+
+;; Load js2 mode
+(autoload 'js2-mode "js2" nil t)
+;; Use js2-mode for editing js file
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 ;; Configure etags-select
 (load-file "~/emacs/elisp/etags-select.el")
