@@ -168,3 +168,14 @@
 
 ;; Set F1 key for manual entry of current word
 (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
+
+(defun paste-from-clipboard()
+  (interactive)
+  (insert (shell-command-to-string "pbpaste")))
+
+(defun copy-to-clipboard (&optional push)
+  (interactive)
+  (let ((process-connection-type nil))
+      (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+        (process-send-string proc (buffer-substring (region-beginning) (region-end)))
+        (process-send-eof proc))))
