@@ -173,7 +173,7 @@
   (interactive)
   (insert (shell-command-to-string "pbpaste")))
 
-(defun copy-to-clipboard (&optional push)
+(defun copy-to-clipboard()
   (interactive)
   (let ((process-connection-type nil))
       (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
