@@ -179,3 +179,8 @@
       (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
         (process-send-string proc (buffer-substring (region-beginning) (region-end)))
         (process-send-eof proc))))
+
+(defun generate-tags-table()
+  (interactive)
+  (dolist (directory tags-directory-list)
+    (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" directory "TAGS") directory)))
