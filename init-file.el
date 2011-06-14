@@ -180,7 +180,8 @@
         (process-send-string proc (buffer-substring (region-beginning) (region-end)))
         (process-send-eof proc))))
 
-(defun generate-tags-table()
+(defun generate-tags()
+  "Generate tags of current project"
   (interactive)
-  (dolist (directory tags-directory-list)
-    (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" directory "TAGS") directory)))
+  (dolist (tags-table tags-table-list)
+    (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" tags-table) (substring tags-table 0 -4))))
