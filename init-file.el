@@ -185,3 +185,16 @@
   (interactive)
   (dolist (tags-table tags-table-list)
     (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" tags-table) (substring tags-table 0 -4))))
+
+(defun python-insert-property(name)
+  "Insert a python property named `name'"
+  (interactive "sProperty Name: ")
+  (insert (concat "@property\n"
+                  "def " name "(self):\n"
+                  "    return self._" name "\n\n"
+                  "@" name ".setter\n"
+                  "def " name "(self, value):\n"
+                  "    self._" name " = value\n\n"
+                  "@" name ".deleter\n"
+                  "def " name "(self):\n"
+                  "    del self._" name "\n")))
