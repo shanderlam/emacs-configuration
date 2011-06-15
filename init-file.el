@@ -190,6 +190,7 @@
   "Name: "
   "@property" \n
   "def " str "(self):" \n
+  "\"\"\"" - "\"\"\"" \n
   "return self._" str \n
   "@" str ".setter" \n
   "def " str "(self, value):" \n
