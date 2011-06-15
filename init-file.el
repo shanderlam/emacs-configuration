@@ -190,12 +190,10 @@
   "Name: "
   "@property" \n
   "def " str "(self):" \n
-  > "return self._" str \n
-  < \n
+  "return self._" str \n
   "@" str ".setter" \n
   "def " str "(self, value):" \n
-  > "self._" str " = value" \n
-  < < \n
+  "self._" str " = value" \n
   < "@" str ".deleter" \n
   "def " str "(self):" \n
-  > "del self._" str \n)
+  "del self._" str \n)
