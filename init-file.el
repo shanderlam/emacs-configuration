@@ -3,8 +3,10 @@
 ;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist '(("." . "~/emacs/backup-files")))
 
-;; Add ~/emacs/elisp to load-path list
+;; Add automatically loading path
 (add-to-list 'load-path "~/emacs/elisp")
+(add-to-list 'load-path "~/emacs/conf")
+(add-to-list 'load-path "~/emacs/prog")
 
 ;; Set default abbrev definition file
 (setq abbrev-file-name "~/emacs/abbrev_defs")
@@ -72,9 +74,6 @@
             ;; Default indentation is usually 2 spaces, changing to 4
             (set (make-local-variable 'sgml-basic-offset) 4)))
 
-;; Load directory specified setting
-(load-file "~/emacs/conf/directories.el")
-(load-file "~/emacs/prog/python.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
