@@ -41,7 +41,6 @@
 
 ;; Automatically activate hs-minor-mode for some programing mode initialization
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
-(add-hook 'python-mode-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook 'hs-minor-mode)
 (add-hook 'js2-mode-hook 'hs-minor-mode)
 
@@ -75,6 +74,7 @@
 
 ;; Load directory specified setting
 (load-file "~/emacs/conf/directories.el")
+(load-file "~/emacs/prog/python.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
@@ -185,16 +185,3 @@
   (interactive)
   (dolist (tags-table tags-table-list)
     (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" tags-table) (substring tags-table 0 -4))))
-
-(define-skeleton python-insert-property "Insert Python property template"
-  "Name: "
-  "@property" \n
-  "def " str "(self):" \n
-  "\"\"\"" - "\"\"\"" \n
-  "return self._" str \n
-  "@" str ".setter" \n
-  "def " str "(self, value):" \n
-  "self._" str " = value" \n
-  < "@" str ".deleter" \n
-  "def " str "(self):" \n
-  "del self._" str \n)
