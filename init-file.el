@@ -39,6 +39,9 @@
 ;; file name initially
 (setq dired-isearch-filenames 'dwim)
 
+;; Set agenda files
+(setq org-agenda-files "~/emacs/org/agenda.lst")
+
 ;; Automatically activate hs-minor-mode for some programing mode initialization
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
 (add-hook 'js-mode-hook 'hs-minor-mode)
