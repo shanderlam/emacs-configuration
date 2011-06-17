@@ -1,4 +1,4 @@
 This is my emacs configuration.
 
-'emacs' is the init file of Emacs.
-'elisp' directory stand for '~/emacs/elisp' of the init file
+Copy files to ~/emacs directory, it should be work.
+
