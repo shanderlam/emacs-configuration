@@ -69,14 +69,13 @@
         (case-label +))
 )
 
-;; Set indentation of html mode
-(add-hook 'html-mode-hook
-          (lambda ()
-            ;; Default indentation is usually 2 spaces, changing to 4
-            (set (make-local-variable 'sgml-basic-offset) 4)))
+;; Set indentation of sgml basic offset
+(setq sgml-basic-offset 4)
 
 ;; Load directory specified setting
 (load-file "~/emacs/conf/directories.el")
+
+;; Load python configurations
 (load-file "~/emacs/prog/python.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
