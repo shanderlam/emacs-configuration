@@ -78,6 +78,15 @@
 ;; Load python configurations
 (load-file "~/emacs/prog/python.el")
 
+;; Hide show for html mode
+(add-to-list 'hs-special-modes-alist
+             '(html-mode
+               "<!--\\|<[^/>]*[^/]>"
+               "-->\\|</[^/>]*[^/]>"
+               "<!--"
+               sgml-skip-tag-forward
+               nil))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
