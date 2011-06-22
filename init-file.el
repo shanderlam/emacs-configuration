@@ -126,6 +126,12 @@
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Auto complete mode
+(add-to-list 'load-path "/Users/shanderlam/emacs/elisp/auto-complete/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/Users/shanderlam/emacs/elisp/auto-complete/ac-dict")
+(ac-config-default)
+
 ;; Enable php mode
 (require 'php-mode)
 ;; Automatically activate flymake mode for php mode
