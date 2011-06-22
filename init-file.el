@@ -126,12 +126,6 @@
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Auto complete mode
-(add-to-list 'load-path "/Users/shanderlam/emacs/elisp/auto-complete/")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/Users/shanderlam/emacs/elisp/auto-complete/ac-dict")
-(ac-config-default)
-
 ;; Enable php mode
 (require 'php-mode)
 ;; Automatically activate flymake mode for php mode
@@ -193,3 +187,42 @@
   (interactive)
   (dolist (tags-table tags-table-list)
     (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" tags-table) (substring tags-table 0 -4))))
+
+
+;; Let completion in a popup menu instead of new buffer
+(defcustom complete-in-region-use-popup t
+  "If non-NIL, complete-in-region will popup a menu with the possible completions."
+  :type 'boolean
+  :group 'completion)
+(autoload 'popup-menu* "popup" "Show a popup menu" nil)
+(defun popup-complete-in-region (next-func start end collection &optional predicate)
+  (if (not complete-in-region-use-popup)
+      (funcall next-func start end collection predicate)
+    (let* ((prefix (buffer-substring start end))
+           (completion (try-completion prefix collection predicate))
+           (choice (and (stringp completion)
+                        (string= completion prefix)
+                        (popup-menu* (all-completions prefix collection predicate))))
+           (replacement (or choice completion))
+           (tail (and (stringp replacement)
+                      (not (string= prefix replacement))
+                      (substring replacement (- end start)))))
+      (cond ((eq completion t)
+             (goto-char end)
+             (message "Sole completion")
+             nil)
+            ((null completion)
+             (message "No match")
+             nil)
+            (tail
+             (goto-char end)
+             (insert tail)
+             t)
+            (choice
+             (message "Nothing to do")
+             nil)
+            (t
+             (message "completion: something failed!")
+             (funcall next-func start end collection predicate))))))
+(add-hook 'completion-in-region-functions 'popup-complete-in-region)
+(provide 'popup-complete)
