@@ -75,17 +75,9 @@
 ;; Load directory specified setting
 (load-file "~/emacs/conf/directories.el")
 
-;; Load python configurations
+;; Load programing configurations
 (load-file "~/emacs/prog/python.el")
-
-;; Hide show for html mode
-(add-to-list 'hs-special-modes-alist
-             '(html-mode
-               "<!--\\|<[^/>]*[^/]>"
-               "-->\\|</[^/>]*[^/]>"
-               "<!--"
-               sgml-skip-tag-forward
-               nil))
+(load-file "~/emacs/prog/html.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
