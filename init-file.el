@@ -72,6 +72,7 @@
 (load-file "~/emacs/prog/python.el")
 (load-file "~/emacs/prog/html.el")
 (load-file "~/emacs/prog/javascript.el")
+(load-file "~/emacs/prog/php.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
@@ -120,11 +121,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Enable php mode
-(require 'php-mode)
-;; Automatically activate flymake mode for php mode
-(add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
 
 ;; Configure etags-select
 (load-file "~/emacs/elisp/etags-select.el")
