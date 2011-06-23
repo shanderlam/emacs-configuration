@@ -44,13 +44,6 @@
 
 ;; Automatically activate hs-minor-mode for some programing mode initialization
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
-(add-hook 'js-mode-hook 'hs-minor-mode)
-(add-hook 'js2-mode-hook 'hs-minor-mode)
-
-;; Automatically activate abbrev-mode for some major mode
-(add-hook 'js-mode-hook 'abbrev-mode)
-(add-hook 'js2-mode-hook 'abbrev-mode)
-
 
 ;; Set tab width
 (setq-default tab-width 4)
@@ -78,6 +71,7 @@
 ;; Load programing configurations
 (load-file "~/emacs/prog/python.el")
 (load-file "~/emacs/prog/html.el")
+(load-file "~/emacs/prog/javascript.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
@@ -131,9 +125,6 @@
 (require 'php-mode)
 ;; Automatically activate flymake mode for php mode
 (add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
-
-;; Load js2 mode
-(autoload 'js2-mode "js2" nil t)
 
 ;; Configure etags-select
 (load-file "~/emacs/elisp/etags-select.el")
