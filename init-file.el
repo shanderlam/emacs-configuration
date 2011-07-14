@@ -42,25 +42,11 @@
 ;; Set agenda files
 (setq org-agenda-files "~/emacs/org/agenda.lst")
 
-;; Automatically activate hs-minor-mode for some programing mode initialization
-(add-hook 'c-mode-common-hook 'hs-minor-mode)
-
 ;; Set tab width
 (setq-default tab-width 4)
 
 ;; Not use tab for indentation
 (setq-default indent-tabs-mode nil)
-
-;; Set C mode indentation to 4
-(setq c-basic-offset 4)
-
-;; Set indentation of c mode
-(setq c-offsets-alist
-      '((substatement-open . 0)
-        (arglist-close c-lineup-arglist-operators)
-        (arglist-intro +)
-        (case-label +))
-)
 
 ;; Set indentation of sgml basic offset
 (setq sgml-basic-offset 4)
@@ -75,6 +61,7 @@
 (load-file "~/emacs/custom_func.el")
 
 ;; Load programing configurations
+(load-file "~/emacs/prog/c.el")
 (load-file "~/emacs/prog/python.el")
 (load-file "~/emacs/prog/html.el")
 (load-file "~/emacs/prog/javascript.el")
