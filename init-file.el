@@ -9,9 +9,6 @@
 ;; Set default abbrev definition file
 (setq abbrev-file-name "~/emacs/abbrev_defs")
 
-;; Enable global-linum-mode
-(global-linum-mode 1)
-
 ;; Show column number in the mode line
 (column-number-mode 1)
 
@@ -60,12 +57,13 @@
 ;; Load custom functions
 (load-file "~/emacs/custom_func.el")
 
-;; Load modesraming configurations
+;; Load mode specific configurations
 (load-file "~/emacs/modes/c.el")
 (load-file "~/emacs/modes/python.el")
 (load-file "~/emacs/modes/html.el")
 (load-file "~/emacs/modes/javascript.el")
 (load-file "~/emacs/modes/php.el")
+(load-file "~/emacs/modes/man.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
