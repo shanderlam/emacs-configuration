@@ -60,12 +60,12 @@
 ;; Load custom functions
 (load-file "~/emacs/custom_func.el")
 
-;; Load programing configurations
-(load-file "~/emacs/prog/c.el")
-(load-file "~/emacs/prog/python.el")
-(load-file "~/emacs/prog/html.el")
-(load-file "~/emacs/prog/javascript.el")
-(load-file "~/emacs/prog/php.el")
+;; Load modesraming configurations
+(load-file "~/emacs/modes/c.el")
+(load-file "~/emacs/modes/python.el")
+(load-file "~/emacs/modes/html.el")
+(load-file "~/emacs/modes/javascript.el")
+(load-file "~/emacs/modes/php.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
