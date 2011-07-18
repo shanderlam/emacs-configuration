@@ -1,4 +1,3 @@
-(add-hook 'man-mode-hook
+(add-hook 'Man-mode-hook
           '(lambda()
-             (linum-mode 0)
-             (hl-line-mode 0)))
+             (hl-line-mode 1)))
