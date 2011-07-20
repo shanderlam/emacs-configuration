@@ -74,21 +74,21 @@
 (setq user-full-name "Shander Lam")
 
 ;; Make mail user agent use the SMTP library
-(setq send-mail-function 'smtpmail-send-it)
+;; (setq send-mail-function 'smtpmail-send-it)
 
 ;; Set the SMTP server's hostname
-(setq smtpmail-smtp-server "smtp.gmail.com")
+;; (setq smtpmail-smtp-server "smtp.gmail.com")
 
 ;; Set the port on the SMTP server to contact
-(setq smtpmail-smtp-service 587)
+;; (setq smtpmail-smtp-service 587)
 
 ;; Set information of SASL authentication
-(setq smtpmail-auth-credentials
-      '(("smtp.gmail.com" 587 "shanderlam@gmail.com" nil)))
+;; (setq smtpmail-auth-credentials
+;;       '(("smtp.gmail.com" 587 "shanderlam@gmail.com" nil)))
 
 ;; Make connect to the server using STARTTLS
-(setq smtpmail-starttls-credentials
-      '(("smtp.gmail.com" 587 nil nil)))
+;; (setq smtpmail-starttls-credentials
+;;       '(("smtp.gmail.com" 587 nil nil)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
