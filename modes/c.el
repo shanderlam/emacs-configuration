@@ -10,4 +10,7 @@
 )
 
 ;; Automatically activate hs-minor-mode for some programing mode initialization
-(add-hook 'c-mode-common-hook 'hs-minor-mode)
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             (hs-minor-mode)
+             (linum-mode 1)))

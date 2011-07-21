@@ -11,7 +11,10 @@ the current directory in Python's search path."
   (python-send-string "sys.path[:0] = ['']"))
 
 (add-hook 'inferior-python-mode-hook 'python-reinstate-current-directory)
-(add-hook 'python-mode-hook 'hs-minor-mode)
+(add-hook 'python-mode-hook
+          '(lambda ()
+             (linum-mode 1)
+             (hs-minor-mode)))
 
 (define-skeleton python-insert-property "Insert Python property template"
   "Name: "
