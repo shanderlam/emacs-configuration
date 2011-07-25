@@ -66,6 +66,7 @@
 (load-file "~/emacs/modes/php.el")
 (load-file "~/emacs/modes/man.el")
 (load-file "~/emacs/modes/info.el")
+(load-file "~/emacs/modes/emacs-lisp.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
