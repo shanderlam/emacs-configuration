@@ -12,5 +12,5 @@
 ;; Automatically activate hs-minor-mode for some programing mode initialization
 (add-hook 'c-mode-common-hook
           '(lambda ()
-             (hs-minor-mode)
+             (hs-minor-mode 1)
              (linum-mode 1)))

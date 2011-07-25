@@ -14,7 +14,7 @@ the current directory in Python's search path."
 (add-hook 'python-mode-hook
           '(lambda ()
              (linum-mode 1)
-             (hs-minor-mode)))
+             (hs-minor-mode 1)))
 
 (define-skeleton python-insert-property "Insert Python property template"
   "Name: "
