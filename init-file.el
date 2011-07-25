@@ -73,6 +73,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'color-theme)
 (color-theme-initialize)
+(color-theme-ir-black)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
@@ -122,14 +123,10 @@
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Configure etags-select
-(load-file "~/emacs/elisp/etags-select.el")
-(global-set-key "\M-?" 'etags-select-find-tag-at-point)
-(global-set-key "\M-." 'etags-select-find-tag)
-(add-hook 'etags-select-mode-hook
-          '(lambda()
-             (local-set-key "\r" 'etags-select-goto-tag)
-             (local-set-key "o" 'etags-select-goto-tag-other-window)))
+;; Enable icy mode
+(add-to-list 'load-path "~/emacs/elisp/icicles/")
+(require 'icicles)
+(icy-mode 1)
 
 ;; Let completion in a popup menu instead of new buffer
 (defcustom complete-in-region-use-popup t
