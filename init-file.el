@@ -124,11 +124,6 @@
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Enable icy mode
-(add-to-list 'load-path "~/emacs/elisp/icicles/")
-(require 'icicles)
-(icy-mode 1)
-
 ;; Let completion in a popup menu instead of new buffer
 (defcustom complete-in-region-use-popup t
   "If non-NIL, complete-in-region will popup a menu with the possible completions."
