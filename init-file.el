@@ -5,7 +5,6 @@
 
 ;; Add ~/emacs/elisp to load-path list
 (add-to-list 'load-path "~/emacs/elisp")
-(add-to-list 'load-path "~/emacs/color-theme")
 
 ;; Set default abbrev definition file
 (setq abbrev-file-name "~/emacs/abbrev_defs")
@@ -68,12 +67,6 @@
 (load-file "~/emacs/modes/info.el")
 (load-file "~/emacs/modes/emacs-lisp.el")
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Configuration for theme
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'color-theme)
-(color-theme-initialize)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
