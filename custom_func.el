@@ -33,8 +33,15 @@
 (defun generate-tags ()
   "Generate tags of current project"
   (interactive)
-  (dolist (tags-table tags-table-list)
-    (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" tags-table) (substring tags-table 0 -4))))
+  (if (boundp 'tags-ignore-list)
+      (setq temp-tags-ignore-list tags-ignore-list))
+  (if (boundp 'temp-tags-ignore-list)
+      (dolist (tags-table tags-table-list)
+        (setq temp-tags-ignore-file (car temp-tags-ignore-list))
+        (if (car temp-tags-ignore-list)
+            (shell-command (concat "cd " (substring tags-table 0 -4) "; etags -R --exclude=@" (car temp-tags-ignore-list) " -V"))
+          (shell-command (concat "cd " (substring tags-table 0 -4) "; etags -R -V")))
+        (setq temp-tags-ignore-list (cdr temp-tags-ignore-list)))))
 
 (defun insert-timestamp ()
   (interactive)
