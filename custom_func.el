@@ -35,3 +35,7 @@
   (interactive)
   (dolist (tags-table tags-table-list)
     (start-process "tags" "*Messages*" "etags" "-R" (concat "-f" tags-table) (substring tags-table 0 -4))))
+
+(defun insert-timestamp ()
+  (interactive)
+  (shell-command "date \"+%Y-%m-%d %H:%M:%S\"" t))
