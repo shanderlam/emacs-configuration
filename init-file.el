@@ -63,7 +63,6 @@
 (load-file "~/emacs/modes/html.el")
 (load-file "~/emacs/modes/javascript.el")
 (load-file "~/emacs/modes/php.el")
-(load-file "~/emacs/modes/man.el")
 (load-file "~/emacs/modes/info.el")
 (load-file "~/emacs/modes/emacs-lisp.el")
 
