@@ -106,6 +106,8 @@
 ;; Mark today's date if current date is visible
 (add-hook 'calendar-today-visible-hook 'calendar-mark-today)
 
+(setq diary-file "~/emacs/diary")
+
 ;; Customize calendar
 (add-hook 'calendar-initial-window-hook
       '(lambda()
