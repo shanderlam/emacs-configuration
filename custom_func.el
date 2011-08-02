@@ -33,6 +33,7 @@
 (defun generate-tags ()
   "Generate tags of current project"
   (interactive)
+  (message "Generating tags...")
   (if (boundp 'tags-ignore-list)
       (setq temp-tags-ignore-list tags-ignore-list))
   (if (boundp 'temp-tags-ignore-list)
@@ -41,7 +42,9 @@
         (if (car temp-tags-ignore-list)
             (shell-command (concat "cd " (substring tags-table 0 -4) "; etags -R --exclude=@" (car temp-tags-ignore-list) " -V"))
           (shell-command (concat "cd " (substring tags-table 0 -4) "; etags -R -V")))
-        (setq temp-tags-ignore-list (cdr temp-tags-ignore-list)))))
+        (setq temp-tags-ignore-list (cdr temp-tags-ignore-list))))
+  (message "Done")
+)
 
 (defun insert-timestamp ()
   (interactive)
