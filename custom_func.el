@@ -45,4 +45,4 @@
 
 (defun insert-timestamp ()
   (interactive)
-  (shell-command "date \"+%Y-%m-%d %H:%M:%S\"" t))
+  (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
