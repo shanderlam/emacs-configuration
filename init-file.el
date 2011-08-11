@@ -3,6 +3,9 @@
 ;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist '(("." . "~/emacs/backup-files")))
 
+;; Setting user directory
+(setq user-emacs-directory "~/emacs/user-dir")
+
 ;; Add ~/emacs/elisp to load-path list
 (add-to-list 'load-path "~/emacs/elisp")
 
