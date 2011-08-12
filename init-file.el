@@ -126,13 +126,6 @@
 (add-to-list 'ac-dictionary-directories "~/emacs/elisp/auto-complete/dict")
 (ac-config-default)
 
-;; erlang mode
-(setq load-path (cons  "/usr/local/lib/erlang/lib/tools-2.6.6.1/emacs"
-                       load-path))
-(setq erlang-root-dir "/usr/local/lib/erlang")
-(setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
-(require 'erlang-start)
-
 ;; etags-select
 (load-file "~/emacs/elisp/etags-select.el")
 (global-set-key "\M-?" 'etags-select-find-tag-at-point)
