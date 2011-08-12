@@ -133,7 +133,7 @@
 (setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
 (require 'erlang-start)
 
-;; Configure etags-select
+;; etags-select
 (load-file "~/emacs/elisp/etags-select.el")
 (global-set-key "\M-?" 'etags-select-find-tag-at-point)
 (global-set-key "\M-." 'etags-select-find-tag)
@@ -141,3 +141,7 @@
           '(lambda()
              (local-set-key "\r" 'etags-select-goto-tag)
              (local-set-key "o" 'etags-select-goto-tag-other-window)))
+
+;; popwin
+(require 'popwin)
+(setq display-buffer-function 'popwin:display-buffer)
