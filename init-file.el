@@ -1,5 +1,9 @@
 ;; -*- mode: Emacs-Lisp; -*-
 
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
 ;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist '(("." . "~/emacs/backup-files")))
 
