@@ -1,7 +1,8 @@
 (add-hook 'html-mode-hook
           '(lambda ()
              (hs-minor-mode 1)
-             (linum-mode 1)))
+             (linum-mode 1)
+             (idle-highlight-mode t)))
 
 ;; Hide show for html mode
 (add-to-list 'hs-special-modes-alist

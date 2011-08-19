@@ -4,7 +4,8 @@
 (defun js-conf ()
   (hs-minor-mode 1)
   (abbrev-mode 1)
-  (linum-mode 1))
+  (linum-mode 1)
+  (idle-highlight-mode t))
 
 (add-hook 'js-mode-hook 'js-conf)
 

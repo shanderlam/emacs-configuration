@@ -4,3 +4,9 @@
 (setq erlang-root-dir "/usr/local/lib/erlang")
 (setq exec-path (cons "/usr/local/lib/erlang/bin" exec-path))
 (require 'erlang-start)
+
+(add-hook 'erlang-mode-hook
+          '(lambda ()
+             (hs-minor-mode 1)
+             (linum-mode 1)
+             (idle-highlight-mode t)))

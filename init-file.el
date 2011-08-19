@@ -146,3 +146,6 @@
 ;; popwin
 (require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
+
+;; idle-highlight-mode
+(load-file "~/emacs/elisp/idle-highlight-mode.el")
