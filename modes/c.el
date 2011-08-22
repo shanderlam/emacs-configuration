@@ -8,10 +8,3 @@
         (arglist-intro +)
         (case-label +))
 )
-
-;; Automatically activate hs-minor-mode for some programing mode initialization
-(add-hook 'c-mode-common-hook
-          '(lambda ()
-             (hs-minor-mode 1)
-             (linum-mode 1)
-             (idle-highlight-mode t)))

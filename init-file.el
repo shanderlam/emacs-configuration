@@ -68,13 +68,13 @@
 (load-file "~/emacs/custom_func.el")
 
 ;; Load mode specific configurations
+(load-file "~/emacs/modes/common-prog.el")
 (load-file "~/emacs/modes/c.el")
 (load-file "~/emacs/modes/python.el")
 (load-file "~/emacs/modes/html.el")
 (load-file "~/emacs/modes/javascript.el")
 (load-file "~/emacs/modes/php.el")
 (load-file "~/emacs/modes/info.el")
-(load-file "~/emacs/modes/emacs-lisp.el")
 (load-file "~/emacs/modes/erlang.el")
 
 
