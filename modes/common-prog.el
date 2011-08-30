@@ -3,7 +3,7 @@
        emacs-lisp-mode-hook
        erlang-mode-hook
        html-mode-hook
-       javascript-mode-hook
+       js-mode-hook
        js2-mode-hook
        php-mode-hook
        python-mode-hook))
