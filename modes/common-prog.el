@@ -1,5 +1,6 @@
 (setq prog-modes
      '(c-mode-common-hook
+       css-mode-hook
        emacs-lisp-mode-hook
        erlang-mode-hook
        html-mode-hook
