@@ -51,3 +51,14 @@
 (defun insert-timestamp ()
   (interactive)
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
+
+
+(if (equal system-type 'darwin)
+    (progn
+      (defun dired-open-file-osx ()
+        (interactive)
+        (shell-command (concat "open " (dired-get-file-for-visit))))
+
+      (add-hook 'dired-mode-hook
+                '(lambda()
+                   (local-set-key "\M-\r" 'dired-open-file-osx)))))
