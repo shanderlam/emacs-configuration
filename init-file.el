@@ -4,20 +4,22 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
+(setq emacs-config-dir "~/emacs/")
+
 ;; Make backup file save in ~/EmacsBackupFiles Directory
-(setq backup-directory-alist '(("." . "~/emacs/backup-files")))
+(setq backup-directory-alist '(("." . (concat emacs-config-dir "backup-files"))))
 
 ;; Setting user directory
-(setq user-emacs-directory "~/emacs/user-dir")
+(setq user-emacs-directory (concat emacs-config-dir "user-dir"))
 
 ;; Add ~/emacs/elisp to load-path list
-(add-to-list 'load-path "~/emacs/elisp")
+(add-to-list 'load-path (concat emacs-config-dir "elisp"))
 
 (add-to-list 'load-path "~/Workspace/github/emacs-starter-kit/")
 (load-file "~/Workspace/github/emacs-starter-kit/init.el")
 
 ;; Set default abbrev definition file
-(setq abbrev-file-name "~/emacs/abbrev_defs")
+(setq abbrev-file-name (concat emacs-config-dir "abbrev_defs"))
 
 ;; Show column number in the mode line
 (column-number-mode 1)
@@ -39,7 +41,7 @@
 (put 'scroll-left 'disabled nil)
 
 ;; Setup bookmarks file
-(setq bookmark-default-file "~/emacs/bookmarks"
+(setq bookmark-default-file (concat emacs-config-dir "bookmarks")
       bookmark-save-flag 1)
 
 ;; Make usual search commands matches only file name when point was on a
@@ -47,7 +49,7 @@
 (setq dired-isearch-filenames 'dwim)
 
 ;; Set agenda files
-(setq org-agenda-files "~/emacs/org/agenda.lst")
+(setq org-agenda-files (concat emacs-config-dir "org/agenda.lst"))
 
 ;; Set tab width
 (setq-default tab-width 4)
@@ -63,20 +65,20 @@
 
 ;; Load directory specified setting
 (if (>= emacs-major-version 23)
-    (load-file "~/emacs/conf/directories.el"))
+    (load-file (concat emacs-config-dir "conf/directories.el")))
 
 ;; Load custom functions
-(load-file "~/emacs/custom_func.el")
+(load-file (concat emacs-config-dir "custom_func.el"))
 
 ;; Load mode specific configurations
-(load-file "~/emacs/modes/common-prog.el")
-(load-file "~/emacs/modes/c.el")
-(load-file "~/emacs/modes/python.el")
-(load-file "~/emacs/modes/html.el")
-(load-file "~/emacs/modes/javascript.el")
-(load-file "~/emacs/modes/php.el")
-(load-file "~/emacs/modes/info.el")
-(load-file "~/emacs/modes/erlang.el")
+(load-file (concat emacs-config-dir "modes/common-prog.el"))
+(load-file (concat emacs-config-dir "modes/c.el"))
+(load-file (concat emacs-config-dir "modes/python.el"))
+(load-file (concat emacs-config-dir "modes/html.el"))
+(load-file (concat emacs-config-dir "modes/javascript.el"))
+(load-file (concat emacs-config-dir "modes/php.el"))
+(load-file (concat emacs-config-dir "modes/info.el"))
+(load-file (concat emacs-config-dir "modes/erlang.el"))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -117,7 +119,7 @@
 ;; Mark today's date if current date is visible
 (add-hook 'calendar-today-visible-hook 'calendar-mark-today)
 
-(setq diary-file "~/emacs/diary")
+(setq diary-file (concat emacs-config-dir "diary"))
 
 ;; Customize calendar
 (add-hook 'calendar-initial-window-hook
@@ -132,13 +134,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (if (>= emacs-major-version 23)
     (progn
-      (add-to-list 'load-path "~/emacs/elisp/auto-complete")
+      (add-to-list 'load-path (concat emacs-config-dir "elisp/auto-complete"))
       (require 'auto-complete-config)
-      (add-to-list 'ac-dictionary-directories "~/emacs/elisp/auto-complete/dict")
+      (add-to-list 'ac-dictionary-directories (concat emacs-config-dir "elisp/auto-complete/dict"))
       (ac-config-default)))
 
 ;; etags-select
-(load-file "~/emacs/elisp/etags-select.el")
+(load-file (concat emacs-config-dir "elisp/etags-select.el"))
 (global-set-key "\M-?" 'etags-select-find-tag-at-point)
 (global-set-key "\M-." 'etags-select-find-tag)
 (add-hook 'etags-select-mode-hook
@@ -151,4 +153,4 @@
 (setq display-buffer-function 'popwin:display-buffer)
 
 ;; idle-highlight-mode
-(load-file "~/emacs/elisp/idle-highlight-mode.el")
+(load-file (concat emacs-config-dir "elisp/idle-highlight-mode.el"))
