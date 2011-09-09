@@ -62,7 +62,8 @@
 (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
 
 ;; Load directory specified setting
-(load-file "~/emacs/conf/directories.el")
+(if (>= emacs-major-version 23)
+    (load-file "~/emacs/conf/directories.el"))
 
 ;; Load custom functions
 (load-file "~/emacs/custom_func.el")
@@ -129,10 +130,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/emacs/elisp/auto-complete")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/emacs/elisp/auto-complete/dict")
-(ac-config-default)
+(if (>= emacs-major-version 23)
+    (progn
+      (add-to-list 'load-path "~/emacs/elisp/auto-complete")
+      (require 'auto-complete-config)
+      (add-to-list 'ac-dictionary-directories "~/emacs/elisp/auto-complete/dict")
+      (ac-config-default)))
 
 ;; etags-select
 (load-file "~/emacs/elisp/etags-select.el")

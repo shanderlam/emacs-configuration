@@ -12,9 +12,8 @@
 (dolist (mode prog-modes)
   (add-hook mode
             '(lambda ()
+               (if (>= emacs-major-version 23) (linum-mode 1))
                (hs-minor-mode 1)
-               (linum-mode 1)
                (idle-highlight-mode t)
                (show-paren-mode t)
                (abbrev-mode 1))))
-
