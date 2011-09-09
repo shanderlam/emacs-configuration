@@ -1,17 +1,20 @@
-(defun show-file-path ()
+(defun show-buffer-file-name ()
   "Show the full path file name of current buffer in the minibuffer."
   (interactive)
   (message (buffer-file-name)))
 
-(defun show-file-name ()
+(defun buffer-file-name-nondirectory()
+  (file-name-nondirectory buffer-file-name))
+
+(defun show-buffer-file-name-nondirectory ()
   "Show the file name of current buffer in the minibuffer."
   (interactive)
-  (message (file-name-nondirectory buffer-file-name)))
+  (message (buffer-file-name-nondirectory)))
 
-(defun insert-file-name ()
+(defun insert-buffer-file-name-nondirectory ()
   "Insert file name of current buffer to current cursor position"
   (interactive)
-  (insert (file-name-nondirectory buffer-file-name)))
+  (insert (buffer-file-name-nondirectory)))
 
 (defun clear-whitespace ()
   "Delete trailing white space, and replace tabs with spaces."
