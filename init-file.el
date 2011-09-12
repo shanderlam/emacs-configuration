@@ -7,7 +7,7 @@
 (setq emacs-config-dir "~/emacs/")
 
 ;; Make backup file save in ~/EmacsBackupFiles Directory
-(setq backup-directory-alist '(("." . (concat emacs-config-dir "backup-files"))))
+(setq backup-directory-alist (list (cons "." (concat "~/emacs" "/backup-files"))))
 
 ;; Setting user directory
 (setq user-emacs-directory (concat emacs-config-dir "user-dir"))
