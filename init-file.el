@@ -6,6 +6,10 @@
 
 (setq emacs-config-dir "~/emacs/")
 
+;; Setting for Chinese Characters under OS X
+(if (equal system-type 'darwin)
+    (set-fontset-font "fontset-default" 'han "STHeiti"))
+
 ;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist (list (cons "." (concat "~/emacs" "/backup-files"))))
 
@@ -159,4 +163,4 @@
     (progn
       (require 'color-theme)
       (color-theme-initialize)
-      (color-theme-gray30)))
+      (color-theme-gray30))
