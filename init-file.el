@@ -150,6 +150,3 @@
 (setq popwin:special-display-config '(("*Completions*" :noselect t)
                                       ("*compilation*" :noselect t)
                                       ("*Occur*" :noselect t)))
-
-;; idle-highlight-mode
-(load-file (concat emacs-config-dir "elisp/idle-highlight-mode.el"))
