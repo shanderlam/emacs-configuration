@@ -163,4 +163,4 @@
     (progn
       (require 'color-theme)
       (color-theme-initialize)
-      (color-theme-gray30))
+      (color-theme-gray30)))
