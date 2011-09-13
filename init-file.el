@@ -162,4 +162,4 @@
       (require 'color-theme)
       (require 'color-theme-solarized)
       (color-theme-initialize)
-      (color-theme-gray30)))
+      (color-theme-solarized-dark)))
