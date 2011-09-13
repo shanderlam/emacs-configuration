@@ -55,17 +55,18 @@
                 '(lambda()
                    (local-set-key "\M-\r" 'dired-open-file-osx)))
 
+      (if (equal window-system nil)
+          (progn
+            (defun paste-from-clipboard ()
+              (interactive)
+              (insert (shell-command-to-string "pbpaste")))
 
-      (defun paste-from-clipboard ()
-        (interactive)
-        (insert (shell-command-to-string "pbpaste")))
+            (global-set-key "\C-cv" 'paste-from-clipboard)
 
-      (global-set-key "\C-cv" 'paste-from-clipboard)
-
-      (defun copy-to-clipboard ()
-        (interactive)
-        (let ((process-connection-type nil))
-          (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
-            (process-send-string proc (buffer-substring (region-beginning) (region-end)))
-            (process-send-eof proc))))
-      (global-set-key "\C-cc" 'copy-to-clipboard)))
+            (defun copy-to-clipboard ()
+              (interactive)
+              (let ((process-connection-type nil))
+                (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+                  (process-send-string proc (buffer-substring (region-beginning) (region-end)))
+                  (process-send-eof proc))))
+            (global-set-key "\C-cc" 'copy-to-clipboard)))))
