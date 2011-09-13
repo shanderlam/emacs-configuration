@@ -155,12 +155,11 @@
                                       ("*compilation*" :noselect t)
                                       ("*Occur*" :noselect t)))
 
-;; color-theme
-(add-to-list 'load-path "~/emacs/color-theme")
-
 ;; Only enable color theme when not in a terminal
 (if window-system
     (progn
+      (add-to-list 'load-path (concat emacs-config-dir "elisp/themes"))
       (require 'color-theme)
+      (require 'color-theme-solarized)
       (color-theme-initialize)
       (color-theme-gray30)))
