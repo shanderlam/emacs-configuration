@@ -16,4 +16,5 @@
                (hs-minor-mode 1)
                (idle-highlight-mode t)
                (show-paren-mode t)
-               (abbrev-mode 1))))
+               (abbrev-mode 1)
+               (setq show-trailing-whitespace t))))

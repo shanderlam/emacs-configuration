@@ -24,9 +24,6 @@
 ;; Show column number in the mode line
 (column-number-mode 1)
 
-;; Show Trailing Whitespace
-(setq-default show-trailing-whitespace t)
-
 ;; Make emacs delete a directory by moving it to trash
 (setq delete-by-moving-to-trash t)
 
@@ -124,8 +121,6 @@
 ;; Customize calendar
 (add-hook 'calendar-initial-window-hook
       '(lambda()
-         ;; Hide trailing whitespace
-         (setq show-trailing-whitespace nil)
          ;; Mark all visible dates that have diary entries
          (diary-mark-entries)))
 
