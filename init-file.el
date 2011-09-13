@@ -150,3 +150,13 @@
 (setq popwin:special-display-config '(("*Completions*" :noselect t)
                                       ("*compilation*" :noselect t)
                                       ("*Occur*" :noselect t)))
+
+;; color-theme
+(add-to-list 'load-path "~/emacs/color-theme")
+
+;; Only enable color theme when not in a terminal
+(if window-system
+    (progn
+      (require 'color-theme)
+      (color-theme-initialize)
+      (color-theme-gray30)))
