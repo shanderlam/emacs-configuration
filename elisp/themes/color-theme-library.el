@@ -9942,11 +9942,7 @@ Includes custom, erc, font-lock, jde, semantic, speedbar, widget."
      (fg:erc-color-face9 ((t (:foreground "green"))))
      (fixed-pitch ((t (:family "courier"))))
      (font-lock-builtin-face ((t (:foreground "LightSkyBlue" :underline t))))
-
-     ;; Modify for showing Chinese characters properly
-     ;; (font-lock-comment-face ((t (:italic t :foreground "lightgreen" :slant oblique))))
-     (font-lock-comment-face ((t (:foreground "lightgreen"))))
-
+     (font-lock-comment-face ((t (:italic t :foreground "lightgreen" :slant oblique))))
      (font-lock-constant-face ((t (:foreground "Aquamarine"))))
      (font-lock-function-name-face ((t (:bold t :foreground "DodgerBlue" :weight bold :height 1.05))))
      (font-lock-keyword-face ((t (:foreground "LightPink" :height 1.05))))
