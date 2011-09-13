@@ -11,7 +11,7 @@
     (set-fontset-font "fontset-default" 'han "STHeiti"))
 
 ;; Make backup file save in ~/EmacsBackupFiles Directory
-(setq backup-directory-alist (list (cons "." (concat "~/emacs" "/backup-files"))))
+(setq backup-directory-alist (list (cons "." (concat emacs-config-dir "backup-files"))))
 
 ;; Setting user directory
 (setq user-emacs-directory (concat emacs-config-dir "user-dir"))
