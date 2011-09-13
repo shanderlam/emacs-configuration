@@ -15,8 +15,8 @@
 ;; Add ~/emacs/elisp to load-path list
 (add-to-list 'load-path (concat emacs-config-dir "elisp"))
 
-(add-to-list 'load-path "~/Workspace/github/emacs-starter-kit/")
-(load-file "~/Workspace/github/emacs-starter-kit/init.el")
+;; (add-to-list 'load-path "~/Workspace/github/emacs-starter-kit/")
+;; (load-file "~/Workspace/github/emacs-starter-kit/init.el")
 
 ;; Set default abbrev definition file
 (setq abbrev-file-name (concat emacs-config-dir "abbrev_defs"))
