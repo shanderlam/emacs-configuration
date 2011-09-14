@@ -8,7 +8,7 @@
 
 ;; Setting for Chinese Characters under OS X
 (if (equal system-type 'darwin)
-    (set-fontset-font "fontset-default" 'han "STHeiti"))
+    (set-fontset-font "fontset-default" 'han "STSong"))
 
 ;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist (list (cons "." (concat emacs-config-dir "backup-files"))))
