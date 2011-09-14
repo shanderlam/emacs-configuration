@@ -28,6 +28,9 @@
 ;; Show column number in the mode line
 (column-number-mode 1)
 
+;; Show time in the mode line
+(display-time-mode 1)
+
 ;; Make emacs delete a directory by moving it to trash
 (setq delete-by-moving-to-trash t)
 
