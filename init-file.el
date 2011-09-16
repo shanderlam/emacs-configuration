@@ -167,6 +167,7 @@
 ;; color theme
 (add-to-list 'load-path (concat emacs-config-dir "elisp/themes"))
 (require 'color-theme)
+(require 'color-theme-solarized)
 (color-theme-initialize)
 
 (add-to-list 'color-themes
@@ -176,5 +177,4 @@
 
 (if window-system
     (progn
-      (require 'color-theme-solarized)
       (color-theme-solarized-dark)))
