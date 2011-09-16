@@ -178,6 +178,8 @@
 (if window-system
     (progn
       (color-theme-solarized-dark)
+      ;; Set this env variable to avoid hg log in GUI version Emacs display
+      ;; non-graphic characters as "?"
       (setenv "LANG" "en_US.UTF-8"))
   (progn
       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
