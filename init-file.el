@@ -164,11 +164,12 @@
                                       ("*compilation*" :noselect t)
                                       ("*Occur*" :noselect t)))
 
-;; Only enable color theme when not in a terminal
+;; color theme
+(add-to-list 'load-path (concat emacs-config-dir "elisp/themes"))
+(require 'color-theme)
+(color-theme-initialize)
+
 (if window-system
     (progn
-      (add-to-list 'load-path (concat emacs-config-dir "elisp/themes"))
-      (require 'color-theme)
       (require 'color-theme-solarized)
-      (color-theme-initialize)
-      (color-theme-solarized-light)))
+      (color-theme-blackboard))
