@@ -14,7 +14,7 @@
       (create-fontset-from-fontset-spec (concat "-ns-*-*-*-*-*-*-*-*-*-*-*-fontset-custom,"
                                                 "latin:-*-Monaco-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
-      (set-frame-font "fontset-custom")))
+      (add-to-list 'default-frame-alist '(font . "fontset-custom"))))
 
 ;; Make backup file save in ~/EmacsBackupFiles Directory
 (setq backup-directory-alist (list (cons "." (concat emacs-config-dir "backup-files"))))
