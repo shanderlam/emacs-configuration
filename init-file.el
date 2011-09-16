@@ -169,7 +169,12 @@
 (require 'color-theme)
 (color-theme-initialize)
 
+(add-to-list 'color-themes
+             '(color-theme-blackboard
+               "TextMate Blackboard"
+               "JD Huntington <jdhuntington@gmail.com>"))
+
 (if window-system
     (progn
       (require 'color-theme-solarized)
-      (color-theme-blackboard))
+      (color-theme-solarized-dark)))
