@@ -81,7 +81,6 @@
 (load-file (concat emacs-config-dir "modes/html.el"))
 (load-file (concat emacs-config-dir "modes/javascript.el"))
 (load-file (concat emacs-config-dir "modes/php.el"))
-(load-file (concat emacs-config-dir "modes/info.el"))
 (load-file (concat emacs-config-dir "modes/erlang.el"))
 
 
@@ -181,7 +180,7 @@
       ;; Set this env variable to avoid hg log in GUI version Emacs display
       ;; non-graphic characters as "?"
       (setenv "LANG" "en_US.UTF-8")
-      (hl-line-mode 1))
+      (global-hl-line-mode 1))
   (progn
       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
       (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
