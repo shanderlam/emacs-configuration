@@ -133,6 +133,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; auto-complete
 (if (>= emacs-major-version 23)
     (progn
       (add-to-list 'load-path (concat emacs-config-dir "elisp/auto-complete"))
@@ -168,7 +170,8 @@
                "TextMate Blackboard"
                "JD Huntington <jdhuntington@gmail.com>"))
 
-
+;; yasnippet
+(require 'yasnippet-bundle)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for different window systems
