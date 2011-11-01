@@ -4,6 +4,7 @@
        emacs-lisp-mode-hook
        erlang-mode-hook
        html-mode-hook
+       jade-mode-hook
        js-mode-hook
        js2-mode-hook
        php-mode-hook

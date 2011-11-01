@@ -82,6 +82,7 @@
 (load-file (concat emacs-config-dir "modes/javascript.el"))
 (load-file (concat emacs-config-dir "modes/php.el"))
 (load-file (concat emacs-config-dir "modes/erlang.el"))
+(load-file (concat emacs-config-dir "modes/jade.el"))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
