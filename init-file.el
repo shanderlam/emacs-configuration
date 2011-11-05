@@ -200,7 +200,7 @@
 
 (if window-system
     (progn
-      (color-theme-solarized-dark)
+      (color-theme-blackboard)
       ;; Set this env variable to avoid hg log in GUI version Emacs display
       ;; non-graphic characters as "?"
       (setenv "LANG" "en_US.UTF-8"))
