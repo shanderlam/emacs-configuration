@@ -4,3 +4,4 @@ conf/*
 diary
 org/*
 user-dir/*
+*.elc
