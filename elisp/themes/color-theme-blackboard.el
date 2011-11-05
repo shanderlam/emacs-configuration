@@ -62,7 +62,12 @@
      (text-cursor ((t (:background "yellow" :foreground "black"))))
      (toolbar ((t (nil))))
      (underline ((nil (:underline nil))))
-     (zmacs-region ((t (:background "snow" :foreground "ble")))))))
+     (zmacs-region ((t (:background "snow" :foreground "ble"))))
+
+     ;; diff
+     (diff-added ((t (:foreground "#859900" :inverse-video t))))
+     (diff-changed ((t (:foreground "#B58900" :inverse-video t))))
+     (diff-removed ((t (:foreground "#DC322F" :inverse-video t)))))))
 
 (provide 'color-theme-blackboard)
 
