@@ -28,7 +28,7 @@
       (background-mode . dark)
       (border-color . "black")
       (cursor-color . "#A7A7A7")
-      (foreground-color . "#F8F8F8")
+      (foregroundound-color . "#F8F8F8")
       (mouse-color . "sienna1"))
      (default ((t (:background "#0C1021" :foreground "#F8F8F8"))))
      (blue ((t (:foreground "blue"))))
@@ -65,9 +65,8 @@
      (zmacs-region ((t (:background "snow" :foreground "ble"))))
 
      ;; diff
-     (diff-added ((t (:foreground "#859900" :inverse-video t))))
-     (diff-changed ((t (:foreground "#B58900" :inverse-video t))))
-     (diff-removed ((t (:foreground "#DC322F" :inverse-video t)))))))
+     (diff-added ((t (:foreground "#61CE3C" :inverse-video t))))
+     (diff-removed ((t (:foreground "Pink" :inverse-video t)))))))
 
 (provide 'color-theme-blackboard)
 
