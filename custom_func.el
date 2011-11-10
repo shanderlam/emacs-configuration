@@ -48,7 +48,7 @@
     (progn
       (defun dired-open-file-osx ()
         (interactive)
-        (shell-command (concat "open " (dired-get-file-for-visit))))
+        (shell-command (concat "open \"" (dired-get-file-for-visit) "\"")))
 
       (add-hook 'dired-mode-hook
                 '(lambda()
