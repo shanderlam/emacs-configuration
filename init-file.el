@@ -11,10 +11,10 @@
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))))
 
 ;; Make backup file save in ~/EmacsBackupFiles Directory
-(setq backup-directory-alist (list (cons "." (concat emacs-config-dir "backup-files"))))
+(setq backup-directory-alist (list (cons "." (concat emacs-config-dir ".backup-files"))))
 
 ;; Setting user directory
-(setq user-emacs-directory (concat emacs-config-dir "user-dir"))
+(setq user-emacs-directory (concat emacs-config-dir ".user-dir"))
 
 ;; Add ~/emacs/elisp to load-path list
 (add-to-list 'load-path (concat emacs-config-dir "elisp"))
