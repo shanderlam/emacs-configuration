@@ -48,6 +48,7 @@
     (progn
       (defun dired-open-file-osx ()
         (interactive)
+        (setq coding-system-for-write 'utf-8)
         (shell-command (concat "open \"" (dired-get-file-for-visit) "\"")))
 
       (add-hook 'dired-mode-hook
