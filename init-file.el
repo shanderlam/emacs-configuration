@@ -190,6 +190,9 @@
 ;; yasnippet
 (require 'yasnippet-bundle)
 
+;; anything
+(require 'anything-config)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for different window systems
