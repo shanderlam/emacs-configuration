@@ -192,6 +192,7 @@
 
 ;; anything
 (require 'anything-config)
+(global-set-key (kbd "C-x C-f") 'anything-find-files)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
