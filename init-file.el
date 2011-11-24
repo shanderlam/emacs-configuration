@@ -64,23 +64,6 @@
 ;; Set F1 key for manual entry of current word
 (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
 
-;; Load directory specified setting
-(if (>= emacs-major-version 23)
-    (load-file (concat emacs-config-dir "conf/directories.el")))
-
-;; Load custom functions
-(load-file (concat emacs-config-dir "custom_func.el"))
-
-;; Load mode specific configurations
-(load-file (concat emacs-config-dir "modes/common-prog.el"))
-(load-file (concat emacs-config-dir "modes/c.el"))
-(load-file (concat emacs-config-dir "modes/python.el"))
-(load-file (concat emacs-config-dir "modes/html.el"))
-(load-file (concat emacs-config-dir "modes/javascript.el"))
-(load-file (concat emacs-config-dir "modes/php.el"))
-(load-file (concat emacs-config-dir "modes/erlang.el"))
-(load-file (concat emacs-config-dir "modes/jade.el"))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for flymake
@@ -157,6 +140,7 @@
       (add-to-list 'load-path (concat emacs-config-dir "elisp/auto-complete"))
       (require 'auto-complete-config)
       (add-to-list 'ac-dictionary-directories (concat emacs-config-dir "elisp/auto-complete/dict"))
+      (add-to-list 'ac-modes 'js3-mode)
       (ac-config-default)))
 
 ;; etags-select
@@ -208,3 +192,25 @@
       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
       (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
       (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Load external settings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Load directory specified setting
+(if (>= emacs-major-version 23)
+    (load-file (concat emacs-config-dir "conf/directories.el")))
+
+;; Load custom functions
+(load-file (concat emacs-config-dir "custom_func.el"))
+
+;; Load mode specific configurations
+(load-file (concat emacs-config-dir "modes/common-prog.el"))
+(load-file (concat emacs-config-dir "modes/c.el"))
+(load-file (concat emacs-config-dir "modes/python.el"))
+(load-file (concat emacs-config-dir "modes/html.el"))
+(load-file (concat emacs-config-dir "modes/javascript.el"))
+(load-file (concat emacs-config-dir "modes/php.el"))
+(load-file (concat emacs-config-dir "modes/erlang.el"))
+(load-file (concat emacs-config-dir "modes/jade.el"))
