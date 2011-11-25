@@ -172,7 +172,11 @@
                "JD Huntington <jdhuntington@gmail.com>"))
 
 ;; yasnippet
-(require 'yasnippet-bundle)
+(add-to-list 'load-path
+             (concat emacs-config-dir "elisp/yasnippet"))
+(require 'yasnippet) ;; not yasnippet-bundle
+(yas/initialize)
+(yas/load-directory (concat emacs-config-dir "elisp/yasnippet/snippets"))
 
 ;; anything
 (require 'anything-config)
