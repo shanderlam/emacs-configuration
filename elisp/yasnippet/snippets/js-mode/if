@@ -1,5 +1,6 @@
 # -*- coding: utf-8; mode: snippet -*-
 # name: if
+# key: if
 # contributor: David Miller <david@deadpansincerity.com>
 # --
 if(${1:condition}){
