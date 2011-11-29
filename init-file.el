@@ -140,7 +140,6 @@
       (add-to-list 'load-path (concat emacs-config-dir "elisp/auto-complete"))
       (require 'auto-complete-config)
       (add-to-list 'ac-dictionary-directories (concat emacs-config-dir "elisp/auto-complete/dict"))
-      (add-to-list 'ac-modes 'js3-mode)
       (ac-config-default)))
 
 ;; etags-select

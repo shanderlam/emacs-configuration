@@ -6,7 +6,6 @@
        html-mode-hook
        jade-mode-hook
        js-mode-hook
-       js3-mode-hook
        php-mode-hook
        python-mode-hook))
 
