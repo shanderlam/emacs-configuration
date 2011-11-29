@@ -1,6 +1,6 @@
 ;; -*- mode: Emacs-Lisp; -*-
 
-(setq emacs-config-dir "~/emacs/")
+(defvar emacs-config-dir "~/emacs/")
 
 ;; Setting for Chinese Characters under OS X
 (if (equal system-type 'darwin)
