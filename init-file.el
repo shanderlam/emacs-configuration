@@ -191,7 +191,8 @@
       (color-theme-blackboard)
       ;; Set this env variable to avoid hg log in GUI version Emacs display
       ;; non-graphic characters as "?"
-      (setenv "LANG" "en_US.UTF-8"))
+      (setenv "LANG" "en_US.UTF-8")
+      (setq default-process-coding-system '(utf-8 . utf-8)))
   (progn
       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
       (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
