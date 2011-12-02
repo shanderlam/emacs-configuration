@@ -1,6 +1,7 @@
 ;; -*- mode: Emacs-Lisp; -*-
 
 (defvar emacs-config-dir "~/emacs/")
+(defvar emacs-doc-dir "~/Documents/Emacs/")
 
 ;; Setting for Chinese Characters under OS X
 (if (equal system-type 'darwin)
@@ -10,13 +11,13 @@
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))))
 
-;; Make backup file save in ~/EmacsBackupFiles Directory
+;; Setting backup directory
 (setq backup-directory-alist (list (cons "." (concat emacs-config-dir ".backup-files"))))
 
 ;; Setting user directory
 (setq user-emacs-directory (concat emacs-config-dir ".user-dir"))
 
-;; Add ~/emacs/elisp to load-path list
+;; Add elisp to load-path list
 (add-to-list 'load-path (concat emacs-config-dir "elisp"))
 
 ;; Set default abbrev definition file
@@ -42,7 +43,7 @@
 (put 'scroll-left 'disabled nil)
 
 ;; Setup bookmarks file
-(setq bookmark-default-file (concat emacs-config-dir "bookmarks")
+(setq bookmark-default-file (concat emacs-doc-dir "bookmarks")
       bookmark-save-flag 1)
 
 ;; Make usual search commands matches only file name when point was on a
@@ -50,7 +51,7 @@
 (setq dired-isearch-filenames 'dwim)
 
 ;; Set agenda files
-(setq org-agenda-files (concat emacs-config-dir "org/agenda.lst"))
+(setq org-agenda-files (concat emacs-config-dir "agenda.lst"))
 
 ;; Set tab width
 (setq-default tab-width 4)
@@ -123,7 +124,7 @@
 ;; Mark today's date if current date is visible
 (add-hook 'calendar-today-visible-hook 'calendar-mark-today)
 
-(setq diary-file (concat emacs-config-dir "diary"))
+(setq diary-file (concat emacs-doc-dir "diary"))
 
 ;; Customize calendar
 (add-hook 'calendar-initial-window-hook

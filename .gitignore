@@ -1,7 +1,7 @@
-.backup-files/*
-bookmarks
-conf/*
-diary
-org/*
-.user-dir/*
 *.elc
+
+.backup-files/*
+.user-dir/*
+
+agenda.lst
+conf/*
