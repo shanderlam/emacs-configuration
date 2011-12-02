@@ -209,11 +209,5 @@
 (load-file (concat emacs-config-dir "custom_func.el"))
 
 ;; Load mode specific configurations
-(load-file (concat emacs-config-dir "modes/common-prog.el"))
-(load-file (concat emacs-config-dir "modes/c.el"))
-(load-file (concat emacs-config-dir "modes/python.el"))
-(load-file (concat emacs-config-dir "modes/html.el"))
-(load-file (concat emacs-config-dir "modes/javascript.el"))
-(load-file (concat emacs-config-dir "modes/php.el"))
-(load-file (concat emacs-config-dir "modes/erlang.el"))
-(load-file (concat emacs-config-dir "modes/jade.el"))
+(dolist (file (directory-files (concat emacs-config-dir "modes") t ".+\.el$"))
+  (load-file file))
