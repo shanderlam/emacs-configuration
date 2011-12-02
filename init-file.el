@@ -205,10 +205,6 @@
 ;; Load external settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Load directory specified setting
-(if (>= emacs-major-version 23)
-    (load-file (concat emacs-config-dir "conf/directories.el")))
-
 ;; Load custom functions
 (load-file (concat emacs-config-dir "custom_func.el"))
 
