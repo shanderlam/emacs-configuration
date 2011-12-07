@@ -171,6 +171,10 @@
              '(color-theme-blackboard
                "TextMate Blackboard"
                "JD Huntington <jdhuntington@gmail.com>"))
+(add-to-list 'color-themes
+             '(color-theme-twilight
+               "TextMate Twilight"
+               "Marcus Crafter <crafterm@redartisan.com>"))
 
 ;; yasnippet
 (add-to-list 'load-path
@@ -190,7 +194,7 @@
 
 (if window-system
     (progn
-      (color-theme-blackboard)
+      (color-theme-twilight)
       ;; Set this env variable to avoid hg log in GUI version Emacs display
       ;; non-graphic characters as "?"
       (setenv "LANG" "en_US.UTF-8")
