@@ -1,4 +1,7 @@
 This is my emacs configuration.
 
-Copy files to ~/emacs directory, it should be work.
+Copy files to anywhere you want, then make ~/.emacs symbolic link to init-file.el.
+Config your `emacs-config-dir' and `emacs-doc-dir'.
+`emacs-config-dir' is the directory hold emacs config files.
+`emacs-doc-dir' is the directory hold some documents for emacs, such as bookmarks, diary, and so on.
 
