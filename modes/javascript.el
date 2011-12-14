@@ -1,5 +1,3 @@
 (add-hook 'js-mode-hook '(lambda()
                            (if (string-match "\\.jade$" buffer-file-name)
-                               (setq js-indent-level 2))
-                           (if (string-match "\\.js$" buffer-file-name)
-                               (flymake-mode t))))
+                               (setq js-indent-level 2))))
