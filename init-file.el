@@ -82,7 +82,7 @@
             (list local-file))))
 
   (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.js\\'" flymake-closure-init)))
+               '("\\.js$\\'" flymake-closure-init)))
 
 (require 'flymake-cursor)
 
