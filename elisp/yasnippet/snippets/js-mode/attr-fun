@@ -1,6 +1,6 @@
 # -*- coding: utf-8; mode: snippet -*-
 # name: attr: function
-# key: fun
+# key: attrfun
 # contributor: David Miller <david@deadpansincerity.com>
 # --
 // $1
