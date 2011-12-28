@@ -194,7 +194,6 @@
 
 (if window-system
     (progn
-      (color-theme-twilight)
       ;; Set this env variable to avoid hg log in GUI version Emacs display
       ;; non-graphic characters as "?"
       (setenv "LANG" "en_US.UTF-8")
@@ -202,8 +201,11 @@
   (progn
       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
       (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-      (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-      (color-theme-shanderlam)))
+      (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))))
+
+(if (equal window-system 'ns)
+    (color-theme-twilight)
+  (color-theme-shanderlam))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
