@@ -3,6 +3,6 @@
 # key: if
 # contributor: David Miller <david@deadpansincerity.com>
 # --
-if(${1:condition}){
+if (${1:condition}) {
     $0
 }
