@@ -3,6 +3,6 @@
 # key: afun
 # contributor: Shander Lam <shanderlam@gmail.com>
 # --
-function(${1:args}) {
+function(${1:args}){
     $0
 }
