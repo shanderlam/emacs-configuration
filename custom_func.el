@@ -51,6 +51,11 @@
         (setq coding-system-for-write 'utf-8)
         (shell-command (concat "open \"" (dired-get-file-for-visit) "\"")))
 
+      (defun reveal-in-finder ()
+        (interactive)
+        (setq conding-system-for-write 'utf-8)
+        (shell-command (concat "open -R \"" (dired-get-file-for-visit) "\"")))
+
       (add-hook 'dired-mode-hook
                 '(lambda()
                    (local-set-key "\M-\r" 'dired-open-file-osx)))
