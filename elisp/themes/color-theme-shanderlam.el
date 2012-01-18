@@ -158,6 +158,8 @@
      (yas/field-debug-face ((t (nil))))
      (yas/field-highlight-face ((t (:background "lightgoldenrod2"))))
 
+     (hl-line ((t (:background "#212121"))))
+
      ;; diff
      (diff-added ((t (:foreground "green"))))
      (diff-removed ((t (:foreground "red")))))))
