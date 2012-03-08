@@ -4,7 +4,7 @@
 (defvar emacs-doc-dir "~/Documents/Emacs/")
 
 ;; Setting for Chinese Characters under OS X
-(if (equal system-type 'darwin)
+(if (equal window-system 'ns)
     (progn
       (create-fontset-from-fontset-spec (concat "-ns-*-*-*-*-*-*-*-*-*-*-*-fontset-custom,"
                                                 "latin:-*-Monaco-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
