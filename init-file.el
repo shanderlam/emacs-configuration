@@ -179,6 +179,8 @@
 ;; anything
 (require 'anything-config)
 
+;; Load magit if installed
+(require 'magit nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for different window systems
