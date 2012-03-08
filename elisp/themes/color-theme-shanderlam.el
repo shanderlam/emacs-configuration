@@ -4,9 +4,7 @@
   (interactive)
   (color-theme-install
    '(color-theme-shanderlam
-     ((background-color . "unspecified-bg")
-      (background-mode . light)
-      (foreground-color . "unspecified-fg"))
+     ((background-mode . dark))
 
      (hl-line ((t (:background "#212121"))))
 
