@@ -8,6 +8,11 @@
 
      (hl-line ((t (:background "#212121"))))
 
+     ;; magit
+     (magit-item-highlight ((t (:background "#191930"))))
+     (magit-diff-add ((t (:foreground "green"))))
+     (magit-diff-del ((t (:foreground "red"))))
+
      ;; diff
      (diff-added ((t (:foreground "green"))))
      (diff-removed ((t (:foreground "red")))))))
