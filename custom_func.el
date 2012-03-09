@@ -46,6 +46,10 @@
 
 (if (equal system-type 'darwin)
     (progn
+      (defun cus-say-current-word()
+        (interactive)
+        (shell-command (concat "say \"" (current-word) "\"")))
+
       (defun dired-open-file-osx ()
         (interactive)
         (setq coding-system-for-write 'utf-8)
