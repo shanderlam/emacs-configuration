@@ -78,5 +78,6 @@
               (let ((process-connection-type nil))
                 (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
                   (process-send-string proc (buffer-substring (region-beginning) (region-end)))
-                  (process-send-eof proc))))
+                  (process-send-eof proc)
+                  (message "Copy successfully!"))))
             (global-set-key "\C-cc" 'copy-to-clipboard)))))
