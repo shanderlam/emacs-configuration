@@ -50,6 +50,11 @@
         (interactive)
         (shell-command (concat "say \"" (current-word) "\"")))
 
+      (defun open-in-macvim ()
+        "Open current file in Macvim"
+        (interactive)
+        (shell-command (concat "open -a Macvim \"" (buffer-file-name) "\"")))
+
       (defun dired-open-file-osx ()
         (interactive)
         (setq coding-system-for-write 'utf-8)
