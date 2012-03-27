@@ -1,0 +1,6 @@
+# -*- coding: utf-8; mode: snippet -*-
+# name: echo
+# key: echo
+# contributor: Shander Lam <shanderlam@gmail.com>
+# --
+<?php echo $0; ?>
