@@ -3,6 +3,14 @@
 (defvar emacs-config-dir "~/emacs/")
 (defvar emacs-doc-dir "~/Documents/Emacs/")
 
+;; Setting for Chinese Characters under OS X
+(if (equal window-system 'ns)
+    (progn
+      (create-fontset-from-fontset-spec (concat "-ns-*-*-*-*-*-*-*-*-*-*-*-fontset-custom,"
+                                                "latin:-*-Monaco-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
+                                                "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
+      (add-to-list 'default-frame-alist '(font . "fontset-custom"))))
+
 ;; Setting backup directory
 (setq backup-directory-alist (list (cons "." (concat emacs-config-dir ".backup-files"))))
 
