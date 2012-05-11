@@ -3,14 +3,6 @@
 (defvar emacs-config-dir "~/emacs/")
 (defvar emacs-doc-dir "~/Documents/Emacs/")
 
-;; Setting for Chinese Characters under OS X
-(if (equal window-system 'ns)
-    (progn
-      (create-fontset-from-fontset-spec (concat "-ns-*-*-*-*-*-*-*-*-*-*-*-fontset-custom,"
-                                                "latin:-*-Monaco-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
-                                                "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
-      (add-to-list 'default-frame-alist '(font . "fontset-custom"))))
-
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
@@ -210,10 +202,15 @@
       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
       (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))))
 
+;; Setting for Chinese Characters under OS X
 (if (equal window-system 'ns)
-    (color-theme-twilight)
+    (progn
+      (create-fontset-from-fontset-spec (concat "-ns-*-*-*-*-*-*-*-*-*-*-*-fontset-custom,"
+                                                "latin:-*-Monaco-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
+                                                "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
+      (add-to-list 'default-frame-alist '(font . "fontset-custom"))
+      (color-theme-twilight))
   (color-theme-shanderlam))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load external settings
