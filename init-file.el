@@ -11,6 +11,9 @@
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))))
 
+;; Disable scroll bar
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
 ;; Setting backup directory
 (setq backup-directory-alist (list (cons "." (concat emacs-config-dir ".backup-files"))))
 
@@ -205,8 +208,7 @@
       (setq default-process-coding-system '(utf-8 . utf-8)))
   (progn
       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-      (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-      (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))))
+      (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))))
 
 (if (equal window-system 'ns)
     (color-theme-twilight)
