@@ -206,7 +206,7 @@
 (if (equal window-system 'ns)
     (progn
       (create-fontset-from-fontset-spec (concat "-ns-*-*-*-*-*-*-*-*-*-*-*-fontset-custom,"
-                                                "latin:-*-Monaco-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
+                                                "latin:-*-Menlo-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
       (color-theme-twilight))
