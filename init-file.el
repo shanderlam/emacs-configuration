@@ -58,7 +58,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Set indentation of sgml basic offset
-(setq sgml-basic-offset 4)
+(setq sgml-basic-offset 2)
 
 ;; Set F1 key for manual entry of current word
 (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
