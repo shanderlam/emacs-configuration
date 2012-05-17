@@ -1,0 +1,8 @@
+# -*- coding: utf-8; mode: snippet -*-
+# name: variable function
+# key: vfun
+# contributor: Shander Lam <shanderlam@gmail.com>
+# --
+var ${1:myfunction} = function(${2:args}){
+    $0
+}
