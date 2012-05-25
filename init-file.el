@@ -209,7 +209,7 @@
                                                 "latin:-*-Menlo-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
-      (color-theme-twilight)
+      (color-theme-solarized-dark)
       (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen))
   (color-theme-shanderlam))
 
