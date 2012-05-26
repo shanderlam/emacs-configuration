@@ -19,3 +19,6 @@
 [submodule "elisp/popwin-el.git"]
 	path = elisp/popwin-el.git
 	url = https://github.com/m2ym/popwin-el.git
+[submodule "elisp/markdown-mode.git"]
+	path = elisp/markdown-mode.git
+	url = https://github.com/defunkt/markdown-mode.git
