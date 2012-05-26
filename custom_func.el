@@ -43,7 +43,7 @@
   (interactive)
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
-
+(require 'dired)
 (if (equal system-type 'darwin)
     (progn
       (defun cus-say-current-word()
