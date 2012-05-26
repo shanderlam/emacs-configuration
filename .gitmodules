@@ -10,3 +10,6 @@
 [submodule "elisp/yasnippet.git"]
 	path = elisp/yasnippet.git
 	url = https://github.com/capitaomorte/yasnippet.git
+[submodule "elisp/jade-mode.git"]
+	path = elisp/jade-mode.git
+	url = https://github.com/brianc/jade-mode.git

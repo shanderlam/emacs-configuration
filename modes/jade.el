@@ -1,3 +1,4 @@
+(add-to-list 'load-path (concat emacs-config-dir "elisp/jade-mode.git"))
 (require 'sws-mode)
 (require 'jade-mode)
 
