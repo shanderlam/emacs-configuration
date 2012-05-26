@@ -41,14 +41,17 @@
 (put 'scroll-left 'disabled nil)
 
 ;; Setup bookmarks file
+(require 'bookmark)
 (setq bookmark-default-file (concat emacs-doc-dir "bookmarks")
       bookmark-save-flag 1)
 
 ;; Make usual search commands matches only file name when point was on a
 ;; file name initially
+(require 'dired-aux)
 (setq dired-isearch-filenames 'dwim)
 
 ;; Set agenda files
+(require 'org)
 (setq org-agenda-files (concat emacs-config-dir "agenda.lst"))
 
 ;; Set tab width
@@ -58,6 +61,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Set indentation of sgml basic offset
+(require 'sgml-mode)
 (setq sgml-basic-offset 2)
 
 ;; Set F1 key for manual entry of current word
@@ -96,6 +100,8 @@
 ;; Make mail user agent use the SMTP library
 (setq send-mail-function 'smtpmail-send-it)
 
+(require 'smtpmail)
+
 ;; Set the SMTP server's hostname
 (setq smtpmail-smtp-server "smtp.gmail.com")
 
@@ -116,6 +122,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set calendar location
+(require 'solar)
 (setq calendar-latitude 26.07459)
 (setq calendar-longitude 119.29659)
 
