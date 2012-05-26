@@ -182,10 +182,9 @@
 
 ;; yasnippet
 (add-to-list 'load-path
-             (concat emacs-config-dir "elisp/yasnippet"))
+             (concat emacs-config-dir "elisp/yasnippet.git"))
 (require 'yasnippet) ;; not yasnippet-bundle
-(setq yas/snippet-dirs (concat emacs-config-dir "elisp/yasnippet/snippets"))
-(yas/load-directory yas/snippet-dirs)
+(add-to-list 'yas/snippet-dirs (concat emacs-config-dir "elisp/yasnippet-snippets"))
 (yas/initialize)
 
 ;; anything

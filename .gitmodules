@@ -7,3 +7,6 @@
 [submodule "elisp/fuzzy-el.git"]
 	path = elisp/fuzzy-el.git
 	url = https://github.com/m2ym/fuzzy-el.git
+[submodule "elisp/yasnippet.git"]
+	path = elisp/yasnippet.git
+	url = https://github.com/capitaomorte/yasnippet.git
