@@ -158,6 +158,7 @@
              (local-set-key "o" 'etags-select-goto-tag-other-window)))
 
 ;; popwin
+(add-to-list 'load-path (concat emacs-config-dir "elisp/popwin-el.git"))
 (require 'popwin)
 (setq display-buffer-function 'popwin:display-buffer)
 (global-set-key (kbd "C-x p") popwin:keymap)
