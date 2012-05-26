@@ -1,0 +1,9 @@
+[submodule "elisp/auto-complete.git"]
+	path = elisp/auto-complete.git
+	url = https://github.com/m2ym/auto-complete.git
+[submodule "elisp/popup-el.git"]
+	path = elisp/popup-el.git
+	url = https://github.com/m2ym/popup-el.git
+[submodule "elisp/fuzzy-el.git"]
+	path = elisp/fuzzy-el.git
+	url = https://github.com/m2ym/fuzzy-el.git
