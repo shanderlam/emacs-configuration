@@ -175,6 +175,7 @@
 
 ;; color theme
 (add-to-list 'load-path (concat emacs-config-dir "elisp/themes"))
+
 (require 'color-theme)
 (require 'color-theme-solarized)
 (color-theme-initialize)
@@ -183,6 +184,10 @@
              '(color-theme-blackboard
                "TextMate Blackboard"
                "JD Huntington <jdhuntington@gmail.com>"))
+
+(load-file
+ (concat emacs-config-dir
+         "elisp/themes/twilight-emacs.git/color-theme-twilight.el"))
 (add-to-list 'color-themes
              '(color-theme-twilight
                "TextMate Twilight"

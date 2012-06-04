@@ -22,3 +22,6 @@
 [submodule "elisp/markdown-mode.git"]
 	path = elisp/markdown-mode.git
 	url = https://github.com/defunkt/markdown-mode.git
+[submodule "elisp/themes/twilight-emacs.git"]
+	path = elisp/themes/twilight-emacs.git
+	url = git@github.com:shanderlam/twilight-emacs.git
