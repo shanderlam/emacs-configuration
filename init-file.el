@@ -229,6 +229,7 @@
                                                 "latin:-*-Menlo-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
+      ;; Set Command-control-f for toggle fullscreen
       (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
