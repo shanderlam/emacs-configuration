@@ -192,6 +192,8 @@
              '(color-theme-twilight
                "TextMate Twilight"
                "Marcus Crafter <crafterm@redartisan.com>"))
+(color-theme-twilight)
+
 
 ;; yasnippet
 (add-to-list 'load-path
@@ -227,9 +229,7 @@
                                                 "latin:-*-Menlo-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
-      (color-theme-twilight)
-      (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen))
-  (color-theme-shanderlam))
+      (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load external settings
