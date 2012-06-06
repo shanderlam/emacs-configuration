@@ -25,3 +25,6 @@
 [submodule "elisp/themes/twilight-emacs.git"]
 	path = elisp/themes/twilight-emacs.git
 	url = git@github.com:shanderlam/twilight-emacs.git
+[submodule "elisp/php-mode.git"]
+	path = elisp/php-mode.git
+	url = https://github.com/ejmr/php-mode.git
