@@ -32,11 +32,11 @@
           (dolist (tags-table-dir tags-table-list)
             (let ((temp-tags-ignore-file (car temp-tags-ignore-list)))
               (if temp-tags-ignore-file
-                  (shell-command (concat "cd " tags-table-dir " && ctags -e -R --exclude=@" temp-tags-ignore-file " -V"))
-                (shell-command (concat "cd " tags-table-dir " && ctags -e -R -V"))))
+                  (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R --exclude=@" temp-tags-ignore-file " -V"))
+                (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
             (setq temp-tags-ignore-list (cdr temp-tags-ignore-list)))))
     (dolist (tags-table-dir tags-table-list)
-      (shell-command (concat "cd " tags-table-dir " && etags -R -V"))))
+      (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
   (message "Done"))
 
 (defun insert-timestamp ()
