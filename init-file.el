@@ -208,6 +208,13 @@
 ;; Load magit if installed
 (require 'magit nil t)
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Load custom functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load-file (concat emacs-config-dir "custom_func.el"))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for different window systems
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -228,6 +235,10 @@
       (create-fontset-from-fontset-spec (concat "-ns-*-*-*-*-*-16-*-*-*-*-*-fontset-custom,"
                                                 "latin:-*-Menlo-*-*-*-*-*-*-*-*-*-*-iso10646-1,"
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
+
+      ;; If Emacs not launched from shell, user PATH not be inherited by Emacs
+      (set-exec-path-from-shell-PATH)
+
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
       ;; Set Command-control-f for toggle fullscreen
       (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen)))
@@ -235,9 +246,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load external settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Load custom functions
-(load-file (concat emacs-config-dir "custom_func.el"))
 
 ;; Load mode specific configurations
 (dolist (file (directory-files (concat emacs-config-dir "modes") t ".+\.el$"))
