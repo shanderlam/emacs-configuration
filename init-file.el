@@ -210,6 +210,11 @@
 ;; anything
 (require 'anything-config)
 
+;; Load git.el
+(add-to-list 'load-path "/usr/local/share/git-core/contrib/emacs")
+(require 'git)
+(require 'git-blame)
+
 ;; Load magit if installed
 (require 'magit nil t)
 
