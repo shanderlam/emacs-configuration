@@ -1,5 +1,5 @@
 ;; erlang mode
-(if (equal system-type 'darwin)
+(if (file-exists-p "/usr/local/lib/erlang/lib/tools-2.6.6.1/emacs")
     (progn
       (add-to-list 'load-path "/usr/local/lib/erlang/lib/tools-2.6.6.1/emacs")
       (setq erlang-root-dir "/usr/local/lib/erlang")
