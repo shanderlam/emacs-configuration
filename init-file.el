@@ -60,6 +60,9 @@
 ;; Not use tab for indentation
 (setq-default indent-tabs-mode nil)
 
+;; Do not allow split window vertically by `split-window-sensibly' function
+(setq split-height-threshold nil)
+
 ;; Set indentation of sgml basic offset
 (require 'sgml-mode)
 (setq sgml-basic-offset 2)
