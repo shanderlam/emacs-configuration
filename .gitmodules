@@ -12,7 +12,7 @@
 	url = https://github.com/capitaomorte/yasnippet.git
 [submodule "elisp/jade-mode.git"]
 	path = elisp/jade-mode.git
-	url = https://github.com/brianc/jade-mode.git
+	url = git@github.com:shanderlam/jade-mode.git
 [submodule "elisp/yaml-mode.git"]
 	path = elisp/yaml-mode.git
 	url = https://github.com/yoshiki/yaml-mode.git
@@ -27,4 +27,4 @@
 	url = git@github.com:shanderlam/twilight-emacs.git
 [submodule "elisp/php-mode.git"]
 	path = elisp/php-mode.git
-	url = https://github.com/ejmr/php-mode.git
+	url = git@github.com:shanderlam/php-mode.git
