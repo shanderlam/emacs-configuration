@@ -71,10 +71,11 @@
 (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
 
 ;; Reload directory variables after major mode change
-(add-hook 'after-change-major-mode-hook
-          '(lambda ()
-             (hack-dir-local-variables)
-             (hack-local-variables-apply)))
+(when (fboundp 'hack-local-variables-apply )
+  (add-hook 'after-change-major-mode-hook
+            '(lambda ()
+               (hack-dir-local-variables)
+               (hack-local-variables-apply))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for flymake
