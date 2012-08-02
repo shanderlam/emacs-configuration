@@ -1,15 +1,10 @@
-(defun show-buffer-file-name ()
-  "Show the full path file name of current buffer in the minibuffer."
-  (interactive)
-  (message (buffer-file-name)))
-
 (defun buffer-file-name-nondirectory()
   (file-name-nondirectory buffer-file-name))
 
-(defun show-buffer-file-name-nondirectory ()
-  "Show the file name of current buffer in the minibuffer."
+(defun insert-buffer-file-name ()
+  "Insert the full path file name of current buffer to current cursor position."
   (interactive)
-  (message (buffer-file-name-nondirectory)))
+  (insert (buffer-file-name)))
 
 (defun insert-buffer-file-name-nondirectory ()
   "Insert file name of current buffer to current cursor position"
