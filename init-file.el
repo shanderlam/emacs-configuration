@@ -252,7 +252,7 @@
                                                 "han:-*-STHeiti-medium-*-*-*-*-*-*-*-*-*-iso10646-1"))
 
       ;; If Emacs not launched from shell, user PATH not be inherited by Emacs
-      (set-exec-path-from-shell-PATH)
+      (cus-set-exec-path-from-shell-PATH)
 
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
       ;; Set Command-control-f for toggle fullscreen
