@@ -82,7 +82,7 @@
                   (message "Copy successfully!"))))
             (global-set-key "\C-cc" 'copy-to-clipboard)))))
 
-(defun cus-set-exec-path-from-shell-PATH ()
+(defun cus-set-exec-path-from-shell-path ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
 
 This is particularly useful under Mac OSX, where GUI apps are not started from a shell."
