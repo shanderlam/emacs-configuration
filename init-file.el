@@ -1,6 +1,4 @@
-;; -*- mode: Emacs-Lisp; -*-
-
-(defvar emacs-config-dir "~/emacs/")
+(defvar emacs-config-dir (file-name-directory load-file-name))
 (defvar emacs-doc-dir "~/Documents/Emacs/")
 
 ;; Disable scroll bar
