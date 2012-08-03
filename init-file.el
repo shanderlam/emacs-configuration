@@ -1,5 +1,8 @@
 (defvar emacs-config-dir (file-name-directory load-file-name))
-(defvar emacs-doc-dir "~/Documents/Emacs/")
+(defvar emacs-doc-dir (concat emacs-config-dir "docs"))
+
+;; Load dir settings
+(load (concat emacs-config-dir "dir-settings.el") t)
 
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
