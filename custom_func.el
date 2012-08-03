@@ -1,4 +1,5 @@
-(defun cus-buffer-file-name-nondirectory()
+(defun cus-buffer-file-name-nondirectory ()
+  "Get buffet file name without directory path."
   (file-name-nondirectory buffer-file-name))
 
 (defun cus-insert-buffer-file-name ()
@@ -7,7 +8,7 @@
   (insert (buffer-file-name)))
 
 (defun cus-insert-buffer-file-name-nondirectory ()
-  "Insert file name of current buffer to current cursor position"
+  "Insert file name of current buffer to current cursor position."
   (interactive)
   (insert (cus-buffer-file-name-nondirectory)))
 
@@ -18,7 +19,7 @@
   (untabify (point-min) (point-max)))
 
 (defun cus-generate-tags ()
-  "Generate tags of current project"
+  "Generate tags of current project."
   (interactive)
   (message "Generating tags...")
   (if (boundp 'tags-ignore-list)
