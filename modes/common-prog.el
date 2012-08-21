@@ -13,7 +13,7 @@
   (add-hook mode
             '(lambda ()
                (if (>= emacs-major-version 23) (linum-mode 1))
-               (hs-minor-mode 1)
                (show-paren-mode t)
                (abbrev-mode 1)
-               (setq show-trailing-whitespace t))))
+               (setq show-trailing-whitespace t)
+               (hs-minor-mode 1))))
