@@ -72,7 +72,7 @@
               (interactive)
               (insert (shell-command-to-string "pbpaste")))
 
-            (global-set-key "\C-cv" 'paste-from-clipboard)
+            (global-set-key "\C-cv" 'cus-paste-from-clipboard)
 
             (defun cus-copy-to-clipboard ()
               (interactive)
@@ -81,7 +81,7 @@
                   (process-send-string proc (buffer-substring (region-beginning) (region-end)))
                   (process-send-eof proc)
                   (message "Copy successfully!"))))
-            (global-set-key "\C-cc" 'copy-to-clipboard)))))
+            (global-set-key "\C-cc" 'cus-copy-to-clipboard)))))
 
 (defun cus-set-exec-path-from-shell-path ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
