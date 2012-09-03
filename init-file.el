@@ -208,7 +208,7 @@
              (concat emacs-config-dir "elisp/yasnippet.git"))
 (require 'yasnippet) ;; not yasnippet-bundle
 (add-to-list 'yas/snippet-dirs (concat emacs-config-dir "elisp/yasnippet-snippets"))
-(yas/initialize)
+(yas-global-mode 1)
 
 ;; anything
 (require 'anything-config)
