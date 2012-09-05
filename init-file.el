@@ -6,8 +6,10 @@
 
 ;; Add melpa repository to package archives
 (when (require 'package nil t)
-  (add-to-list 'package-archives
-               '("melpa" . "http://melpa.milkbox.net/packages/") t))
+  (progn
+    (add-to-list 'package-archives
+                 '("melpa" . "http://melpa.milkbox.net/packages/") t)
+    (setq package-user-dir (concat emacs-config-dir "elpa"))))
 
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
