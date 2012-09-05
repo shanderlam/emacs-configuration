@@ -4,6 +4,10 @@
 ;; Load dir settings
 (load (concat emacs-config-dir "dir-settings.el") t)
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
