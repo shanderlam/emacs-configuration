@@ -167,12 +167,8 @@
 (add-to-list 'load-path (concat emacs-config-dir "elisp/fuzzy-el.git"))
 
 ;; auto-complete
-(if (>= emacs-major-version 23)
-    (progn
-      (add-to-list 'load-path (concat emacs-config-dir "elisp/auto-complete.git"))
-      (require 'auto-complete-config)
-      (add-to-list 'ac-dictionary-directories (concat emacs-config-dir "elisp/auto-complete.git/dict"))
-      (ac-config-default)))
+(when (require 'auto-complete-config nil t)
+  (ac-config-default))
 
 ;; etags-select
 (load-file (concat emacs-config-dir "elisp/etags-select.el"))
