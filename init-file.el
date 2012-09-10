@@ -160,9 +160,6 @@
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; fuzzy
-(add-to-list 'load-path (concat emacs-config-dir "elisp/fuzzy-el.git"))
-
 ;; auto-complete
 (when (require 'auto-complete-config nil t)
   (ac-config-default))
