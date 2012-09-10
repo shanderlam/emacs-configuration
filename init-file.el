@@ -9,7 +9,9 @@
   (progn
     (add-to-list 'package-archives
                  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-    (setq package-user-dir (concat emacs-config-dir "elpa"))))
+    (setq package-user-dir (concat emacs-config-dir "elpa"))
+    (setq package-enable-at-startup nil)
+    (package-initialize)))
 
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
