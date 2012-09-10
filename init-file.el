@@ -160,9 +160,6 @@
 ;; Configurations for extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; popup
-(add-to-list 'load-path (concat emacs-config-dir "elisp/popup-el.git"))
-
 ;; fuzzy
 (add-to-list 'load-path (concat emacs-config-dir "elisp/fuzzy-el.git"))
 
