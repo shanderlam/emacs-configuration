@@ -162,7 +162,10 @@
 
 ;; auto-complete
 (when (require 'auto-complete-config nil t)
-  (ac-config-default))
+  (ac-config-default)
+  (defun ac-js-mode-setup ()
+    (setq ac-sources (append '(ac-source-yasnippet) ac-sources)))
+  (add-hook 'js-mode-hook 'ac-js-mode-setup))
 
 ;; etags-select
 (load-file (concat emacs-config-dir "elisp/etags-select.el"))
