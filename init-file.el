@@ -105,7 +105,7 @@
   (add-to-list 'flymake-allowed-file-name-masks
                '("\\.js$\\'" flymake-closure-init)))
 
-(require 'flymake-cursor)
+(require 'flymake-cursor nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for Email
