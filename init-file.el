@@ -208,11 +208,10 @@
 (color-theme-original)
 
 ;; yasnippet
-(add-to-list 'load-path
-             (concat emacs-config-dir "elisp/yasnippet.git"))
-(require 'yasnippet) ;; not yasnippet-bundle
-(add-to-list 'yas/snippet-dirs (concat emacs-config-dir "elisp/yasnippet-snippets"))
-(yas-global-mode 1)
+(when (require 'yasnippet nil t)
+  (progn
+    (add-to-list 'yas/snippet-dirs (concat emacs-config-dir "elisp/yasnippet-snippets"))
+    (yas-global-mode 1)))
 
 ;; anything
 (require 'anything-config)
