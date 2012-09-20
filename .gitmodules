@@ -4,9 +4,6 @@
 [submodule "elisp/yaml-mode.git"]
 	path = elisp/yaml-mode.git
 	url = https://github.com/yoshiki/yaml-mode.git
-[submodule "elisp/popwin-el.git"]
-	path = elisp/popwin-el.git
-	url = https://github.com/m2ym/popwin-el.git
 [submodule "elisp/themes/twilight-emacs.git"]
 	path = elisp/themes/twilight-emacs.git
 	url = https://github.com/shanderlam/twilight-emacs.git
