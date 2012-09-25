@@ -1,6 +1,11 @@
+
 (defun cus-buffer-file-name-nondirectory ()
   "Get buffet file name without directory path."
   (file-name-nondirectory buffer-file-name))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Functions for inserting string
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun cus-insert-buffer-file-name ()
   "Insert the full path file name of current buffer to current cursor position."
@@ -12,32 +17,19 @@
   (interactive)
   (insert (cus-buffer-file-name-nondirectory)))
 
+(defun cus-insert-timestamp ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
+
 (defun cus-clear-whitespace ()
   "Delete trailing white space, and replace tabs with spaces."
   (interactive)
   (delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
 
-(defun cus-generate-tags ()
-  "Generate tags of current project."
-  (interactive)
-  (message "Generating tags...")
-  (if (boundp 'tags-ignore-list)
-      (progn
-        (let ((temp-tags-ignore-list tags-ignore-list))
-          (dolist (tags-table-dir tags-table-list)
-            (let ((temp-tags-ignore-file (car temp-tags-ignore-list)))
-              (if temp-tags-ignore-file
-                  (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R --exclude=@" temp-tags-ignore-file " -V"))
-                (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
-            (setq temp-tags-ignore-list (cdr temp-tags-ignore-list)))))
-    (dolist (tags-table-dir tags-table-list)
-      (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
-  (message "Done"))
-
-(defun cus-insert-timestamp ()
-  (interactive)
-  (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Functions for osx
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'dired)
 (if (equal system-type 'darwin)
@@ -82,6 +74,27 @@
                   (process-send-eof proc)
                   (message "Copy successfully!"))))
             (global-set-key "\C-cc" 'cus-copy-to-clipboard)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Misc Functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun cus-generate-tags ()
+  "Generate tags of current project."
+  (interactive)
+  (message "Generating tags...")
+  (if (boundp 'tags-ignore-list)
+      (progn
+        (let ((temp-tags-ignore-list tags-ignore-list))
+          (dolist (tags-table-dir tags-table-list)
+            (let ((temp-tags-ignore-file (car temp-tags-ignore-list)))
+              (if temp-tags-ignore-file
+                  (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R --exclude=@" temp-tags-ignore-file " -V"))
+                (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
+            (setq temp-tags-ignore-list (cdr temp-tags-ignore-list)))))
+    (dolist (tags-table-dir tags-table-list)
+      (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
+  (message "Done"))
 
 (defun cus-set-exec-path-from-shell-path ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
