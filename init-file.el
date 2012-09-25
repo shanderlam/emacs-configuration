@@ -67,9 +67,6 @@
 ;; Set tab width
 (setq-default tab-width 4)
 
-;; Not use tab for indentation
-(setq-default indent-tabs-mode nil)
-
 ;; Do not allow split window vertically by `split-window-sensibly' function
 (setq split-height-threshold nil)
 
