@@ -84,6 +84,11 @@
                (hack-dir-local-variables)
                (hack-local-variables-apply))))
 
+;; Color theme
+(when (>= emacs-major-version 24)
+  (add-to-list 'custom-theme-load-path (concat emacs-config-dir "themes"))
+  (load-theme 'original t))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for flymake
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -181,20 +186,6 @@
     (setq popwin:special-display-config '(("*Completions*" :noselect t)
                                           ("*compilation*" :noselect t)
                                           ("*Occur*" :noselect t)))))
-
-;; color theme
-(add-to-list 'load-path (concat emacs-config-dir "elisp/themes"))
-
-(require 'color-theme)
-(require 'color-theme-solarized)
-(color-theme-initialize)
-
-(add-to-list 'color-themes
-             '(color-theme-blackboard
-               "TextMate Blackboard"
-               "JD Huntington <jdhuntington@gmail.com>"))
-
-(color-theme-original)
 
 ;; yasnippet
 (when (require 'yasnippet nil t)
