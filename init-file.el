@@ -169,6 +169,18 @@
     (setq ac-sources (append '(ac-source-yasnippet) ac-sources)))
   (add-hook 'js-mode-hook 'ac-js-mode-setup))
 
+;; mark-multiple
+(when (require 'mark-multiple nil t)
+  (require 'inline-string-rectangle)
+  (global-set-key (kbd "C-x r t") 'inline-string-rectangle)
+
+  (require 'mark-more-like-this)
+  (global-set-key (kbd "C-M-m") 'mark-more-like-this) ; like the other two, but takes an argument (negative is previous)
+  (add-hook 'sgml-mode-hook
+			(lambda ()
+			  (require 'rename-sgml-tag)
+			  (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag))))
+
 ;; etags-select
 (load-file (concat emacs-config-dir "elisp/etags-select.el"))
 (global-set-key "\M-?" 'etags-select-find-tag-at-point)
