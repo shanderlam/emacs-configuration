@@ -6,17 +6,18 @@
 ;; Functions for inserting string
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun cus-insert-buffer-file-name ()
-  "Insert the full path file name of current buffer to current cursor position."
-  (interactive)
-  (insert (buffer-file-name)))
+(defun cus-insert-buffer-file-name (arg)
+  "With no prefix argument, insert the full path file name of current buffer
+to current cursor position.
+
+With prefix argument, Insert file name of current buffer to current cursor
+position."
+  (interactive "P")
+  (if arg
+	  (insert (cus-buffer-file-name-nondirectory))
+	(insert (buffer-file-name))))
 
 (defalias 'fn 'cus-insert-buffer-file-name)
-
-(defun cus-insert-buffer-file-name-nondirectory ()
-  "Insert file name of current buffer to current cursor position."
-  (interactive)
-  (insert (cus-buffer-file-name-nondirectory)))
 
 (defun cus-insert-timestamp ()
   (interactive)
