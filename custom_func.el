@@ -64,16 +64,13 @@
               (interactive)
               (insert (shell-command-to-string "pbpaste")))
 
-            (global-set-key "\C-cv" 'cus-paste-from-clipboard)
-
             (defun cus-copy-to-clipboard ()
               (interactive)
               (let ((process-connection-type nil))
                 (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
                   (process-send-string proc (buffer-substring (region-beginning) (region-end)))
                   (process-send-eof proc)
-                  (message "Copy successfully!"))))
-            (global-set-key "\C-cc" 'cus-copy-to-clipboard)))))
+                  (message "Copy successfully!"))))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Misc Functions
