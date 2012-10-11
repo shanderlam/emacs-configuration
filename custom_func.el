@@ -40,11 +40,15 @@ position."
 (require 'dired)
 (if (equal system-type 'darwin)
     (progn
-      (defun cus-say-current-word()
+      (defun cus-say()
         (interactive)
-        (shell-command (concat "say \"" (current-word) "\"")))
+		(if (and transient-mark-mode mark-active)
+			(shell-command
+			 (concat "say \""
+					 (buffer-substring (region-beginning) (region-end)) "\""))
+		  (shell-command (concat "say \"" (current-word) "\""))))
 
-      (defalias 'say 'cus-say-current-word)
+      (defalias 'say 'cus-say)
 
       (defun cus-open-in-macvim ()
         "Open current file in Macvim"
