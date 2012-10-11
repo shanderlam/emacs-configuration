@@ -1,4 +1,3 @@
-
 (defun cus-buffer-file-name-nondirectory ()
   "Get buffet file name without directory path."
   (file-name-nondirectory buffer-file-name))
@@ -12,6 +11,8 @@
   (interactive)
   (insert (buffer-file-name)))
 
+(defalias 'fn 'cus-insert-buffer-file-name)
+
 (defun cus-insert-buffer-file-name-nondirectory ()
   "Insert file name of current buffer to current cursor position."
   (interactive)
@@ -21,11 +22,15 @@
   (interactive)
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
+(defalias 'ts 'cus-insert-timestamp)
+
 (defun cus-clear-whitespace ()
   "Delete trailing white space, and replace tabs with spaces."
   (interactive)
   (delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
+
+(defalias 'cls 'cus-clear-whitespace)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Functions for osx
@@ -38,10 +43,14 @@
         (interactive)
         (shell-command (concat "say \"" (current-word) "\"")))
 
+      (defalias 'say 'cus-say-current-word)
+
       (defun cus-open-in-macvim ()
         "Open current file in Macvim"
         (interactive)
         (shell-command (concat "open -a Macvim \"" (buffer-file-name) "\"")))
+
+	  (defalias 'macvim 'cus-open-in-macvim)
 
       (defun cus-dired-open-file-osx ()
         (interactive)
@@ -64,13 +73,17 @@
               (interactive)
               (insert (shell-command-to-string "pbpaste")))
 
+            (defalias 'pst 'cus-paste-from-clipboard)
+
             (defun cus-copy-to-clipboard ()
               (interactive)
               (let ((process-connection-type nil))
                 (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
                   (process-send-string proc (buffer-substring (region-beginning) (region-end)))
                   (process-send-eof proc)
-                  (message "Copy successfully!"))))))))
+                  (message "Copy successfully!"))))
+
+            (defalias 'cp 'cus-copy-to-clipboard)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Misc Functions
@@ -92,6 +105,8 @@
     (dolist (tags-table-dir tags-table-list)
       (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
   (message "Done"))
+
+(defalias 'ctags 'cus-generate-tags)
 
 (defun cus-set-exec-path-from-shell-path ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
