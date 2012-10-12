@@ -53,7 +53,7 @@ position."
       (defun cus-open-in-macvim ()
         "Open current file in Macvim"
         (interactive)
-        (shell-command (concat "open -a Macvim \"" (buffer-file-name) "\"")))
+        (shell-command (concat "open -a /usr/local/Cellar/macvim/7.3-65/MacVim.app \"" (buffer-file-name) "\"")))
 
 	  (defalias 'macvim 'cus-open-in-macvim)
 
