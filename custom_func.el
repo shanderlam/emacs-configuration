@@ -70,7 +70,7 @@ position."
       (add-hook 'dired-mode-hook
                 '(lambda()
                    (local-set-key "\M-\r" 'cus-dired-open-file-osx)
-                   (local-set-key "J" 'reveal-in-finder)))
+                   (local-set-key "J" 'cus-reveal-in-finder)))
 
       (if (equal window-system nil)
           (progn
