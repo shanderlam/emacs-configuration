@@ -17,13 +17,9 @@ position."
 	  (insert (cus-buffer-file-name-nondirectory))
 	(insert (buffer-file-name))))
 
-(defalias 'fn 'cus-insert-buffer-file-name)
-
 (defun cus-insert-timestamp ()
   (interactive)
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
-
-(defalias 'ts 'cus-insert-timestamp)
 
 (defun cus-clear-whitespace ()
   "Delete trailing white space, and replace tabs with spaces."
@@ -31,7 +27,6 @@ position."
   (delete-trailing-whitespace)
   (untabify (point-min) (point-max)))
 
-(defalias 'cls 'cus-clear-whitespace)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Functions for osx
@@ -48,14 +43,10 @@ position."
 					 (buffer-substring (region-beginning) (region-end)) "\""))
 		  (shell-command (concat "say \"" (current-word) "\""))))
 
-      (defalias 'say 'cus-say)
-
       (defun cus-open-in-macvim ()
         "Open current file in Macvim"
         (interactive)
         (shell-command (concat "open -a /usr/local/Cellar/macvim/7.3-65/MacVim.app \"" (buffer-file-name) "\"")))
-
-	  (defalias 'macvim 'cus-open-in-macvim)
 
       (defun cus-dired-open-file-osx ()
         (interactive)
@@ -78,8 +69,6 @@ position."
               (interactive)
               (insert (shell-command-to-string "pbpaste")))
 
-            (defalias 'pst 'cus-paste-from-clipboard)
-
             (defun cus-copy-to-clipboard ()
               (interactive)
               (let ((process-connection-type nil))
@@ -87,8 +76,7 @@ position."
                   (process-send-string proc (buffer-substring (region-beginning) (region-end)))
                   (process-send-eof proc)
                   (message "Copy successfully!"))))
-
-            (defalias 'cp 'cus-copy-to-clipboard)))))
+            ))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Misc Functions
@@ -110,8 +98,6 @@ position."
     (dolist (tags-table-dir tags-table-list)
       (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
   (message "Done"))
-
-(defalias 'ctags 'cus-generate-tags)
 
 (defun cus-set-exec-path-from-shell-path ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
