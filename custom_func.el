@@ -13,12 +13,14 @@ to current cursor position.
 With prefix argument, Insert file name of current buffer to current cursor
 position."
   (interactive "P")
+  (push-mark)
   (if arg
 	  (insert (cus-buffer-file-name-nondirectory))
 	(insert (buffer-file-name))))
 
 (defun cus-insert-timestamp ()
   (interactive)
+  (push-mark)
   (insert (format-time-string "%Y-%m-%d %H:%M:%S")))
 
 (defun cus-clear-whitespace ()
