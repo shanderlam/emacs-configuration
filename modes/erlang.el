@@ -1,2 +1,3 @@
 ;; erlang mode
-(require 'erlang-start nil t)
+(when (require 'erlang-start nil t)
+  (add-to-list 'auto-mode-alist '("rebar.config$" . erlang-mode)))
