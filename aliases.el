@@ -5,7 +5,7 @@
 (defalias 'ctags 'cus-generate-tags)
 
 (when (fboundp 'cus-say) (defalias 'say 'cus-say))
-(when (fboundp 'cus-open-in-macvim) (defalias 'macvim 'cus-open-in-macvim))
+(when (fboundp 'cus-open-in-macvim) (defalias 'mvim 'cus-open-in-macvim))
 (when (fboundp 'cus-paste-from-clipboard)
   (defalias 'pst 'cus-paste-from-clipboard))
 (when (fboundp 'cus-copy-to-clipboard)
