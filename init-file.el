@@ -254,6 +254,8 @@
       (cus-set-exec-path-from-shell-path)
 
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
+	  (setq locate-make-command-line '(lambda(search-string)
+										(list "mdfind" "-name" search-string)))
       ;; Set Command-control-f for toggle fullscreen
       (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen)))
 
