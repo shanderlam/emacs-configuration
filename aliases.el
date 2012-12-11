@@ -10,3 +10,5 @@
   (defalias 'pst 'cus-paste-from-clipboard))
 (when (fboundp 'cus-copy-to-clipboard)
   (defalias 'cp 'cus-copy-to-clipboard))
+
+(when (fboundp 'list-packages) (defalias 'lp 'list-packages))
