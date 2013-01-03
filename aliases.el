@@ -1,5 +1,6 @@
 (defalias 'sb 'speedbar)
 (defalias 'fn 'cus-insert-buffer-file-name)
+(defalias 'rb 'revert-buffer)
 (defalias 'ts 'cus-insert-timestamp)
 (defalias 'cls 'cus-clear-whitespace)
 (defalias 'ctags 'cus-generate-tags)
