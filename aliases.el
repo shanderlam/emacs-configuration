@@ -5,6 +5,8 @@
 (defalias 'cls 'cus-clear-whitespace)
 (defalias 'ctags 'cus-generate-tags)
 
+(when (fboundp 'anything-locate) (defalias 'alc 'anything-locate))
+(when (fboundp 'anything-imenu) (defalias 'aim 'anything-imenu))
 (when (fboundp 'cus-say) (defalias 'say 'cus-say))
 (when (fboundp 'cus-open-in-macvim) (defalias 'mvim 'cus-open-in-macvim))
 (when (fboundp 'cus-paste-from-clipboard)
