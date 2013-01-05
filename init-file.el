@@ -167,6 +167,17 @@
 (load-file (concat emacs-config-dir "custom-func.el"))
 (load-file (concat emacs-config-dir "aliases.el"))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Configurations for OS X
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(if (equal system-type 'darwin)
+	(progn
+	  (setq locate-make-command-line
+			'(lambda(search-string)
+			   (list "mdfind" "-name" search-string)))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for different window systems
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -192,8 +203,7 @@
       (cus-set-exec-path-from-shell-path)
 
       (add-to-list 'default-frame-alist '(font . "fontset-custom"))
-	  (setq locate-make-command-line '(lambda(search-string)
-										(list "mdfind" "-name" search-string)))
+
       ;; Set Command-control-f for toggle fullscreen
       (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen)))
 
