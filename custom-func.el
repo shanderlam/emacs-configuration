@@ -1,5 +1,5 @@
 (defun cus-buffer-file-name-nondirectory ()
-  "Get buffet file name without directory path."
+  "Get buffer file name without directory path."
   (file-name-nondirectory buffer-file-name))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
