@@ -6,8 +6,8 @@
 (defalias 'lcp 'cus-locate-project)
 (defalias 'ctags 'cus-generate-tags)
 
-(when (fboundp 'anything-locate) (defalias 'alc 'anything-locate))
-(when (fboundp 'anything-imenu) (defalias 'aim 'anything-imenu))
+(when (fboundp 'helm-locate) (defalias 'hlc 'helm-locate))
+(when (fboundp 'helm-imenu) (defalias 'him 'helm-imenu))
 (when (fboundp 'cus-say) (defalias 'say 'cus-say))
 (when (fboundp 'cus-open-in-macvim) (defalias 'mvim 'cus-open-in-macvim))
 (when (fboundp 'cus-paste-from-clipboard)
