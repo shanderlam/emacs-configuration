@@ -1,6 +1,6 @@
 (defun cus-locate-project (search-string)
   "Locate files within the project."
-  (interactive "MLocate: ")
+  (interactive "MLocate in Project: ")
   (if (boundp 'cus-project)
 	  (locate search-string (concat cus-project "/*"))
 	(locate search-string)))
