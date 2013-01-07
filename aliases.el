@@ -3,6 +3,7 @@
 (defalias 'rb 'revert-buffer)
 (defalias 'ts 'cus-insert-timestamp)
 (defalias 'cls 'cus-clear-whitespace)
+(defalias 'lcp 'cus-locate-project)
 (defalias 'ctags 'cus-generate-tags)
 
 (when (fboundp 'anything-locate) (defalias 'alc 'anything-locate))
