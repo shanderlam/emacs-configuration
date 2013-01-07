@@ -1,3 +1,10 @@
+(defun cus-locate-project (search-string)
+  "Locate files within the project."
+  (interactive "MLocate: ")
+  (if (boundp 'cus-project)
+	  (locate search-string (concat cus-project "/*"))
+	(locate search-string)))
+
 (defun cus-buffer-file-name-nondirectory ()
   "Get buffer file name without directory path."
   (file-name-nondirectory buffer-file-name))
