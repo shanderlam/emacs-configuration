@@ -5,6 +5,7 @@
 
 (when (fboundp 'helm-locate) (defalias 'hlc 'helm-locate))
 (when (fboundp 'helm-imenu) (defalias 'him 'helm-imenu))
+(when (fboundp 'magit-status) (defalias 'ms 'magit-status))
 
 (defalias 'cls 'cus-clear-whitespace)
 (defalias 'ctags 'cus-generate-tags)
