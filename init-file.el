@@ -74,9 +74,6 @@
 (require 'sgml-mode)
 (setq sgml-basic-offset 2)
 
-;; Set F1 key for manual entry of current word
-(global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
-
 ;; Reload directory variables after major mode change
 (when (fboundp 'hack-local-variables-apply )
   (add-hook 'after-change-major-mode-hook
@@ -167,7 +164,6 @@
 (load-file (concat emacs-config-dir "custom-func.el"))
 (load-file (concat emacs-config-dir "aliases.el"))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for OS X
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -202,10 +198,7 @@
       ;; If Emacs not launched from shell, user PATH not be inherited by Emacs
       (cus-set-exec-path-from-shell-path)
 
-      (add-to-list 'default-frame-alist '(font . "fontset-custom"))
-
-      ;; Set Command-control-f for toggle fullscreen
-      (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen)))
+      (add-to-list 'default-frame-alist '(font . "fontset-custom"))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load external settings
@@ -214,3 +207,6 @@
 ;; Load mode specific configurations
 (dolist (file (directory-files (concat emacs-config-dir "modes") t ".+\.el$"))
   (load-file file))
+
+;; Load key bindings
+(load-file (concat emacs-config-dir "key-bindings.el"))
