@@ -58,6 +58,11 @@ position."
         (interactive)
         (shell-command (concat "open -a ~/Applications/MacVim \"" (buffer-file-name) "\"")))
 
+	  (defun cus-open-in-textmate ()
+		"Open current file in TextMate"
+		(interactive)
+		(shell-command (concat "open -a TextMate \"" (buffer-file-name) "\"")))
+
       (defun cus-dired-open-file-osx ()
         (interactive)
         (setq coding-system-for-write 'utf-8)
