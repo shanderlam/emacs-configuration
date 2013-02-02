@@ -106,6 +106,11 @@ If the region is active and `transient-mark-mode' is on, call
 	  (eval-region (region-beginning) (region-end))
 	(eval-last-sexp arg)))
 
+(defun cus-show-manual ()
+  "Show manual for current word."
+  (interactive)
+  (manual-entry (current-word)))
+
 (defun cus-generate-tags ()
   "Generate tags of current project."
   (interactive)
