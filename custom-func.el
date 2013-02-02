@@ -100,7 +100,7 @@ position."
 (defun cus-eval-dwim (arg)
   "Call eval command you want (Do What I Mean).
 If the region is active and `transient-mark-mode' is on, call
-`eval-region'. Else, call `eval-last-sexp'"
+`eval-region'. Else, call `eval-last-sexp'."
   (interactive "P")
   (if (and transient-mark-mode mark-active)
 	  (eval-region (region-beginning) (region-end))
