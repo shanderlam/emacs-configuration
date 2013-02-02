@@ -4,3 +4,6 @@
 (when (equal window-system 'ns)
   ;; Set Command-control-f for toggle fullscreen
   (global-set-key (kbd "<C-s-268632070>") 'ns-toggle-fullscreen))
+
+(when (fboundp 'cus-eval-dwim)
+  (global-set-key (kbd "C-x C-e") 'cus-eval-dwim))
