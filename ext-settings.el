@@ -45,12 +45,6 @@
     (add-to-list 'yas/snippet-dirs (concat emacs-config-dir "elisp/yasnippet-snippets"))
     (yas-global-mode 1)))
 
-;; Load git.el
-(when (file-exists-p "/usr/local/share/git-core/contrib/emacs")
-  (add-to-list 'load-path "/usr/local/share/git-core/contrib/emacs")
-  (require 'git)
-  (require 'git-blame))
-
 ;; Load magit if installed
 (require 'magit nil t)
 
