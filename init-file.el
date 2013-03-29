@@ -40,6 +40,9 @@
 ;; Make emacs delete a directory by moving it to trash
 (setq delete-by-moving-to-trash t)
 
+;; Enable ido mode
+(ido-mode t)
+
 ;; Enable iswitchb mode
 (iswitchb-mode t)
 
