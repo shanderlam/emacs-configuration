@@ -175,7 +175,8 @@
 	(progn
 	  (setq locate-make-command-line
 			'(lambda(search-string)
-			   (list "mdfind" "-name" search-string)))))
+			   (list "mdfind" "-name" search-string)))
+	  (setq trash-directory "~/.Trash")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for different window systems
