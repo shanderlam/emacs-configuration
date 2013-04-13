@@ -87,6 +87,7 @@ position."
           (progn
             (defun cus-paste-from-clipboard ()
               (interactive)
+			  (push-mark)
               (insert (shell-command-to-string "pbpaste")))
 
             (defun cus-copy-to-clipboard ()
