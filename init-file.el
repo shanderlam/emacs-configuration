@@ -46,9 +46,6 @@
 ;; Enable ido mode
 (ido-mode t)
 
-;; Enable iswitchb mode
-(iswitchb-mode t)
-
 ;; Make buffer name unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
