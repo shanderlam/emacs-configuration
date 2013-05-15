@@ -45,6 +45,14 @@
     (add-to-list 'yas-snippet-dirs (concat emacs-config-dir "elisp/yasnippet-snippets"))
     (yas-global-mode 1)))
 
+(defun yas-load-project-snippets ()
+  "Load project specific snippets"
+  (interactive)
+  (when (boundp 'cus-project-snippets)
+	(progn
+	  (add-to-list 'yas-snippet-dirs cus-project-snippets)
+	  (yas-reload-all))))
+
 ;; Load magit if installed
 (require 'magit nil t)
 
