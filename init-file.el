@@ -43,6 +43,9 @@
 ;; Make emacs delete a directory by moving it to trash
 (setq delete-by-moving-to-trash t)
 
+;; Enable iswitchb mode
+(iswitchb-mode t)
+
 ;; Make buffer name unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'forward)
