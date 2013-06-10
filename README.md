@@ -1,8 +1,7 @@
 This is my emacs configuration.
 ===============================
 
-Copy files to anywhere you want, then make ~/.emacs symbolic link to
-init-file.el.  As a alternative, you can use *`load-file'* function to
+Copy files to anywhere you want, then use *`load-file'* function to
 load init-file.el in the ~/.emacs file.
 
 *\`emacs-config-dir'* is the directory hold emacs config files.
