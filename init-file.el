@@ -31,9 +31,6 @@
 ;; Enable mark commend repeat pop
 (setq set-mark-command-repeat-pop t)
 
-;; Enable subword mode
-(global-subword-mode)
-
 ;; Show column number in the mode line
 (column-number-mode 1)
 
