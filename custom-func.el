@@ -66,7 +66,7 @@ position."
 	  (defun cus-open-in-sublime ()
 		"Open current file in Sublime Text"
 		(interactive)
-		(shell-command (concat "open -a \"Sublime Text 2\" \"" (buffer-file-name) "\"")))
+		(shell-command (concat "open -a \"Sublime Text\" \"" (buffer-file-name) "\"")))
 
       (defun cus-dired-open-file-osx ()
         (interactive)
