@@ -56,7 +56,7 @@ position."
       (defun cus-open-in-macvim ()
         "Open current file in Macvim"
         (interactive)
-        (shell-command (concat "open -a ~/Applications/MacVim \"" (buffer-file-name) "\"")))
+        (shell-command (concat "open -a MacVim \"" (buffer-file-name) "\"")))
 
 	  (defun cus-open-in-textmate ()
 		"Open current file in TextMate"
