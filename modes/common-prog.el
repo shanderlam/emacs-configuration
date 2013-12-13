@@ -5,6 +5,7 @@
                 html-mode-hook
                 jade-mode-hook
                 js-mode-hook
+				js2-mode-hook
                 php-mode-hook
                 python-mode-hook))
   (add-hook mode
