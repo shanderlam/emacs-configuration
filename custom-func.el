@@ -1,11 +1,3 @@
-(defun cus-locate-project (search-string)
-  "Locate files within the project if `cus-project' is set,
-otherwise locate files within `default-directory'."
-  (interactive "MLocate in Project: ")
-  (if (boundp 'cus-project)
-	  (locate search-string (concat cus-project "/*"))
-	(locate search-string (concat default-directory "/*"))))
-
 (defun cus-buffer-file-name-nondirectory ()
   "Get buffer file name without directory path."
   (file-name-nondirectory buffer-file-name))
@@ -116,23 +108,6 @@ If the region is active and `transient-mark-mode' is on, call
   "Show manual for current word."
   (interactive)
   (manual-entry (current-word)))
-
-(defun cus-generate-tags ()
-  "Generate tags of current project."
-  (interactive)
-  (message "Generating tags...")
-  (if (boundp 'tags-ignore-list)
-      (progn
-        (let ((temp-tags-ignore-list tags-ignore-list))
-          (dolist (tags-table-dir tags-table-list)
-            (let ((temp-tags-ignore-file (car temp-tags-ignore-list)))
-              (if temp-tags-ignore-file
-                  (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R --exclude=@" temp-tags-ignore-file " -V"))
-                (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
-            (setq temp-tags-ignore-list (cdr temp-tags-ignore-list)))))
-    (dolist (tags-table-dir tags-table-list)
-      (shell-command (concat "cd " tags-table-dir " && /usr/local/bin/ctags -e -R -V"))))
-  (message "Done"))
 
 (defun cus-set-exec-path-from-shell-path ()
   "Set up Emacs' `exec-path' and PATH environment variable to match that used by the user's shell.
