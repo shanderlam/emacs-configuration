@@ -1,12 +1,12 @@
-;;; original-theme.el --- Additional themes for original faces.
+;;; osx-terminal-pro-theme.el --- Additional themes for original faces.
 
 ;;; Code:
 
-(deftheme original
+(deftheme osx-terminal-pro
   "Customize faces for magit, diff.")
 
 (custom-theme-set-faces
- 'original
+ 'osx-terminal-pro
 
  '(hl-line ((t (:background "#212121"))))
 
@@ -30,10 +30,10 @@
  '(diff-added ((t (:foreground "green"))))
  '(diff-removed ((t (:foreground "red")))))
 
-(provide-theme 'original)
+(provide-theme 'osx-terminal-pro)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; original-theme.el ends here
+;;; osx-terminal-pro-theme.el ends here

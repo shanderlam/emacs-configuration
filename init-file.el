@@ -84,7 +84,7 @@
 ;; Color theme
 (when (>= emacs-major-version 24)
   (add-to-list 'custom-theme-load-path (concat emacs-config-dir "themes"))
-  (load-theme 'original t))
+  (load-theme 'osx-terminal-pro t))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configuration for flymake
