@@ -90,20 +90,6 @@
 ;; Configuration for flymake
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Configure flymake for javascript using closure compiler
-(when (load "flymake" t)
-  (defun flymake-closure-init ()
-    (let* ((temp-file (flymake-init-create-temp-buffer-copy
-		       'flymake-create-temp-inplace))
-           (local-file (file-relative-name
-                        temp-file
-                        (file-name-directory buffer-file-name))))
-      (list (concat emacs-config-dir "shell-scripts/closure.sh")
-            (list local-file))))
-
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.js$\\'" flymake-closure-init)))
-
 (require 'flymake-cursor nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
