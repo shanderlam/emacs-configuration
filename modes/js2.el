@@ -1,5 +1,4 @@
 (when (require 'js2-mode nil t)
   (progn
-	(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-	(setq js2-bounce-indent-p t)
+	(add-hook 'js-mode-hook 'js2-minor-mode)
 	(setq js2-strict-inconsistent-return-warning nil)))
