@@ -19,3 +19,4 @@
 (when (fboundp 'cus-paste-from-clipboard)
   (defalias 'pst 'cus-paste-from-clipboard))
 (when (fboundp 'cus-say) (defalias 'say 'cus-say))
+(when (fboundp 'cus-url-encode) (defalias 'url-encode 'cus-url-encode))

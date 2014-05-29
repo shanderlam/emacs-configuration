@@ -3,8 +3,12 @@
   (file-name-nondirectory buffer-file-name))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Functions for inserting string
+;; Functions for manipulating string
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun cus-url-encode ()
+	(interactive)
+	(if (and transient-mark-mode mark-active)
+		(insert (url-encode-url (delete-and-extract-region (region-beginning) (region-end))))))
 
 (defun cus-insert-buffer-file-name (arg)
   "With no prefix argument, insert the full path file name of current buffer
