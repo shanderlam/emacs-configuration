@@ -21,15 +21,6 @@
 			  (require 'rename-sgml-tag)
 			  (define-key sgml-mode-map (kbd "C-c C-r") 'rename-sgml-tag))))
 
-;; etags-select
-(load-file (concat emacs-config-dir "elisp/etags-select.el"))
-(global-set-key "\M-?" 'etags-select-find-tag-at-point)
-(global-set-key "\M-." 'etags-select-find-tag)
-(add-hook 'etags-select-mode-hook
-          '(lambda()
-             (local-set-key "\r" 'etags-select-goto-tag)
-             (local-set-key "o" 'etags-select-goto-tag-other-window)))
-
 ;; popwin
 (when (require 'popwin nil t)
   (progn
