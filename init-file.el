@@ -57,10 +57,6 @@
 (require 'dired-aux)
 (setq dired-isearch-filenames 'dwim)
 
-;; Set agenda files
-(require 'org)
-(setq org-agenda-files (concat emacs-config-dir "agenda.lst"))
-
 ;; Set tab width
 (setq-default tab-width 4)
 
