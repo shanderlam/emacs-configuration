@@ -79,28 +79,6 @@
 (require 'flymake-cursor nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Configurations for calendar
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Set calendar location
-(require 'solar)
-(setq calendar-latitude 26.07459)
-(setq calendar-longitude 119.29659)
-
-;; Mark today's date if current date is visible
-(add-hook 'calendar-today-visible-hook 'calendar-mark-today)
-
-(setq diary-file (concat emacs-doc-dir "diary"))
-
-;; Customize calendar
-(add-hook 'calendar-initial-window-hook
-      '(lambda()
-         ;; Mark all visible dates that have diary entries
-         (diary-mark-entries)))
-
-(load-file (concat emacs-config-dir "ext-settings.el"))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load custom functions and aliases
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
