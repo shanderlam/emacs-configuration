@@ -79,35 +79,6 @@
 (require 'flymake-cursor nil t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Configuration for Email
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; Set user's full name in Email's From header
-(setq user-full-name "Shander Lam")
-
-(setq user-mail-address "shanderlam@gmail.com")
-
-;; Make mail user agent use the SMTP library
-(setq send-mail-function 'smtpmail-send-it)
-
-(require 'smtpmail)
-
-;; Set the SMTP server's hostname
-(setq smtpmail-smtp-server "smtp.gmail.com")
-
-;; Set the port on the SMTP server to contact
-(setq smtpmail-smtp-service 587)
-
-;; Set information of SASL authentication
-(setq smtpmail-auth-credentials
-      '(("smtp.gmail.com" 587 "shanderlam@gmail.com" nil)))
-
-;; Make connect to the server using STARTTLS
-(setq smtpmail-starttls-credentials
-      '(("smtp.gmail.com" 587 nil nil)))
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Configurations for calendar
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
