@@ -57,15 +57,8 @@
 (require 'dired-aux)
 (setq dired-isearch-filenames 'dwim)
 
-;; Set tab width
-(setq-default tab-width 4)
-
 ;; Do not allow split window vertically by `split-window-sensibly' function
 (setq split-height-threshold nil)
-
-;; Set indentation of sgml basic offset
-(require 'sgml-mode)
-(setq sgml-basic-offset 2)
 
 ;; Reload directory variables after major mode change
 (when (fboundp 'hack-local-variables-apply )
