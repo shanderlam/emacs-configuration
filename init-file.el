@@ -25,9 +25,6 @@
 ;; Add elisp to load-path list
 (add-to-list 'load-path (concat emacs-config-dir "elisp"))
 
-;; Set default abbrev definition file
-(setq abbrev-file-name (concat emacs-config-dir "abbrev_defs"))
-
 ;; Enable mark commend repeat pop
 (setq set-mark-command-repeat-pop t)
 
