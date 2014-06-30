@@ -13,6 +13,9 @@
     (setq package-enable-at-startup nil)
     (package-initialize)))
 
+;; Enable semantic mode
+(semantic-mode 1)
+
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
