@@ -51,4 +51,5 @@
 (autoload 'csv-mode "csv-mode"
   "Major mode for editing comma-separated value files." t)
 
-(projectile-global-mode)
+(when (require 'projectile nil t)
+  (projectile-global-mode))
