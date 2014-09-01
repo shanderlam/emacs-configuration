@@ -30,6 +30,9 @@
                                           ("*compilation*" :noselect t)
                                           ("*Occur*" :noselect t)))))
 
+(when (require 'projectile nil t)
+  (projectile-global-mode))
+
 ;; yasnippet
 (when (require 'yasnippet nil t)
   (progn
@@ -37,12 +40,16 @@
     (yas-global-mode 1)))
 
 (defun yas-load-project-snippets ()
-  "Load project specific snippets"
+  "Load project specific snippets.
+
+This function require projectile, and snippets directory must be .snippets under project root directory."
   (interactive)
-  (when (boundp 'cus-project-snippets)
+  (when (and (fboundp 'projectile-project-root) (projectile-project-root))
+    (let ((snippets-dir (concat (projectile-project-root) ".snippets")))
+      (when (file-exists-p snippets-dir)
 	(progn
-	  (add-to-list 'yas-snippet-dirs cus-project-snippets)
-	  (yas-reload-all))))
+	  (add-to-list 'yas-snippet-dirs snippets-dir)
+	  (yas-reload-all))))))
 
 ;; Load magit if installed
 (require 'magit nil t)
@@ -50,6 +57,3 @@
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
 (autoload 'csv-mode "csv-mode"
   "Major mode for editing comma-separated value files." t)
-
-(when (require 'projectile nil t)
-  (projectile-global-mode))
