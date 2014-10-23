@@ -1,4 +1,4 @@
-(defvar emacs-config-dir (file-name-directory load-file-name))
+(defvar emacs-config-dir "/Users/shanderlam/Configurations/Emacs/")
 (defvar emacs-doc-dir (concat emacs-config-dir "docs"))
 
 ;; Load dir settings
