@@ -36,7 +36,7 @@
 ;; yasnippet
 (when (require 'yasnippet nil t)
   (progn
-    (add-to-list 'yas-snippet-dirs (concat emacs-config-dir "elisp/yasnippet-snippets"))
+    (add-to-list 'yas-snippet-dirs (concat emacs-config-dir "snippets"))
     (yas-global-mode 1)))
 
 (defun yas-load-project-snippets ()
