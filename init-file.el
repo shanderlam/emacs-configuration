@@ -77,7 +77,7 @@
 ;; Load custom functions and aliases
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(load-file (concat emacs-config-dir "custom-func.el"))
+(load-file (concat emacs-config-dir "functions.el"))
 (load-file (concat emacs-config-dir "aliases.el"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
