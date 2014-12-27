@@ -1,15 +1,10 @@
-(defvar emacs-config-dir "/Users/shanderlam/Configurations/Emacs/")
-(defvar emacs-doc-dir (concat emacs-config-dir "docs"))
-
-;; Load dir settings
-(load (concat emacs-config-dir "dir-settings.el") t)
+(defvar emacs-config-dir (file-name-directory (file-truename load-file-name)))
 
 ;; Add melpa repository to package archives
 (when (require 'package nil t)
   (progn
     (add-to-list 'package-archives
                  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-    (setq package-user-dir (concat emacs-config-dir "elpa"))
     (setq package-enable-at-startup nil)
     (package-initialize)))
 
@@ -18,12 +13,6 @@
 
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-;; Setting backup directory
-(setq backup-directory-alist (list (cons "." (concat emacs-config-dir ".backup-files"))))
-
-;; Setting user directory
-(setq user-emacs-directory (concat emacs-config-dir ".user-dir"))
 
 ;; Add elisp to load-path list
 (add-to-list 'load-path (concat emacs-config-dir "elisp"))
@@ -49,11 +38,6 @@
 
 ;; Enable scroll-left function
 (put 'scroll-left 'disabled nil)
-
-;; Setup bookmarks file
-(require 'bookmark)
-(setq bookmark-default-file (concat emacs-doc-dir "bookmarks")
-      bookmark-save-flag 1)
 
 ;; Make usual search commands matches only file name when point was on a
 ;; file name initially
