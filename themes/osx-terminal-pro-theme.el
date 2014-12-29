@@ -9,7 +9,6 @@
  'osx-terminal-pro
 
  ;; magit
- '(magit-item-highlight ((t (:background "#191930"))))
  '(magit-diff-add ((t (:foreground "green"))))
  '(magit-diff-del ((t (:foreground "red"))))
 
