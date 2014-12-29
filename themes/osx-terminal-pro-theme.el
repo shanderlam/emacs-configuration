@@ -8,8 +8,6 @@
 (custom-theme-set-faces
  'osx-terminal-pro
 
- '(hl-line ((t (:background "#212121"))))
-
  ;; magit
  '(magit-item-highlight ((t (:background "#191930"))))
  '(magit-diff-add ((t (:foreground "green"))))
