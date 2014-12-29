@@ -1,5 +1,6 @@
-(defalias 'sb 'speedbar)
 (defalias 'rb 'revert-buffer)
+(defalias 'sm 'set-mark-command)
+(defalias 'sb 'speedbar)
 
 (when (fboundp 'list-packages) (defalias 'lp 'list-packages))
 
