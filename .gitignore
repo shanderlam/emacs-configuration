@@ -1,9 +1,1 @@
 *.elc
-
-.backup-files/*
-.user-dir/*
-
-agenda.lst
-conf/*
-dir-settings.el
-elpa/*
