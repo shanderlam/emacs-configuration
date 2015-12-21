@@ -9,6 +9,10 @@
     (setq ac-sources (append '(ac-source-yasnippet) ac-sources)))
   (add-hook 'js-mode-hook 'ac-js-mode-setup))
 
+;; editorconfig
+(when (require 'editorconfig nil t)
+  (editorconfig-mode 1))
+
 ;; mark-multiple
 (when (require 'mark-multiple nil t)
   (require 'inline-string-rectangle)
