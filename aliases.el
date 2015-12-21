@@ -17,6 +17,7 @@
 (when (fboundp 'cus-open-in-macvim) (defalias 'mvim 'cus-open-in-macvim))
 (when (fboundp 'cus-open-in-textmate) (defalias 'mate 'cus-open-in-textmate))
 (when (fboundp 'cus-open-in-sublime) (defalias 'subl 'cus-open-in-sublime))
+(when (fboundp 'cus-open) (defalias 'open 'cus-open))
 (when (fboundp 'cus-paste-from-clipboard)
   (defalias 'pst 'cus-paste-from-clipboard))
 (when (fboundp 'cus-say) (defalias 'say 'cus-say))

@@ -54,15 +54,21 @@ position."
         (interactive)
         (shell-command (concat "open -a MacVim \"" (buffer-file-name) "\"")))
 
-	  (defun cus-open-in-textmate ()
-		"Open current file in TextMate"
-		(interactive)
-		(shell-command (concat "open -a TextMate \"" (buffer-file-name) "\"")))
+      (defun cus-open-in-textmate ()
+	"Open current file in TextMate"
+	(interactive)
+	(shell-command (concat "open -a TextMate \"" (buffer-file-name) "\"")))
 
-	  (defun cus-open-in-sublime ()
-		"Open current file in Sublime Text"
-		(interactive)
-		(shell-command (concat "open -a \"Sublime Text\" \"" (buffer-file-name) "\"")))
+      (defun cus-open-in-sublime ()
+	"Open current file in Sublime Text"
+	(interactive)
+	(shell-command (concat "open -a \"Sublime Text\" \"" (buffer-file-name) "\"")))
+
+      (defun cus-open ()
+	"Open current file"
+	(interactive)
+	(shell-command (concat "open \"" (buffer-file-name) "\"")))
+
 
       (defun cus-dired-open-file-osx ()
         (interactive)
