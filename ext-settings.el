@@ -57,6 +57,7 @@ This function require projectile, and snippets directory must be .snippets under
 
 ;; Load magit if installed
 (require 'magit nil t)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 (add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
 (autoload 'csv-mode "csv-mode"
