@@ -5,3 +5,5 @@
 	     (abbrev-mode 1)
 	     (setq show-trailing-whitespace t)
 	     (hs-minor-mode 1)))
+
+(setq interpreter-mode-alist (cons '("node" . js-mode) interpreter-mode-alist))
