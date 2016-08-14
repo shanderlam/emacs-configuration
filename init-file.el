@@ -11,6 +11,8 @@
 ;; Enable semantic mode
 (semantic-mode 1)
 
+(setq backup-directory-alist (list (cons "." (concat emacs-config-dir ".backup-files"))))
+
 ;; Disable scroll bar
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
